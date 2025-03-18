@@ -1,0 +1,21 @@
+.site {
+  min-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+}
+
+.site-main {
+  flex-grow: 1;
+  justify-content: stretch;
+  display: flex;
+}
+
+.three-columns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.three-columns > div {
+  width: 33.3%;
+}
