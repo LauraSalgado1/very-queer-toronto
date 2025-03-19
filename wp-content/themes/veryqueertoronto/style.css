@@ -387,8 +387,8 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: #484848;
+	font-family: "Merriweather", serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -400,6 +400,16 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: "League Spartan", "Helvetica Neue", sans-serif;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
 }
 
 p {
@@ -457,7 +467,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #efefed;
 }
 
 hr {
@@ -474,6 +484,12 @@ ol {
 
 ul {
 	list-style: disc;
+}
+
+.list-no-style {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 ol {
@@ -518,15 +534,15 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #484848;
 }
 
 a:visited {
-	color: #800080;
+	color: #484848;
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #f61600;
 }
 
 a:focus {
@@ -542,21 +558,32 @@ a:hover, a:active {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
+input[type="submit"],
+.button {
+	font-family: "League Spartan", "Helvetica Neue", sans-serif;
+	text-decoration: none;
+	border: none;
+	border-radius: 0;
+	background: #484848;
+	color: #fff;
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 12px 15px 10px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+input[type="submit"]:hover,
+.button:hover {
+	background: #f61600;
+	color: #fff;
 }
 
 button:active, button:focus,
@@ -565,8 +592,11 @@ input[type="button"]:focus,
 input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
-input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+input[type="submit"]:focus,
+.button:active,
+.button:focus {
+	background: #f61600;
+	color: #fff;
 }
 
 input[type="text"],
@@ -622,7 +652,7 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 .site {
-	min-height: calc(100vh - 32px);
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
@@ -631,6 +661,7 @@ textarea {
 	flex-grow: 1;
 	justify-content: stretch;
 	display: flex;
+	width: 100%;
 }
 
 .three-columns {
@@ -641,6 +672,49 @@ textarea {
 
 .three-columns > div {
 	width: 33.3%;
+}
+
+.event-card {
+	background: #fff;
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.event-card > h3,
+.event-card p {
+	margin: 0;
+}
+
+.event-meta {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.bg-image {
+	background-image: url(https://picsum.photos/555/795);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bg-image h2 {
+	margin: 0;
+}
+
+.bg-image a {
+	background: #fff;
+	padding: 40px;
+}
+
+.event-column section {
+	padding: 0 20px;
+}
+
+.event-column h2 {
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -871,6 +945,55 @@ textarea {
 	display: block;
 }
 
+.site-footer {
+	padding: 20px 40px;
+}
+
+.site-footer h3 {
+	margin: 0;
+}
+
+.site-footer p {
+	font-size: 0.8rem;
+	margin: 0;
+}
+
+.site-footer .callout {
+	margin-bottom: 20px;
+}
+
+.footer-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.socials {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
+
+.socials a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.socials svg {
+	width: 30px;
+	height: 30px;
+}
+
+.site-header {
+	padding: 20px 40px;
+}
+
+.site-header h1 {
+	margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -907,7 +1030,7 @@ textarea {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: #fff;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;

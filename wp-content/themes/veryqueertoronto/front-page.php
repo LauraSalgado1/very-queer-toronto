@@ -17,10 +17,12 @@ get_header();
 
 	<main id="primary" class="site-main">
         <div class="three-columns">
-            <div>
-                <section><h2>Matchmaking Service</h2></section>
+            <div class="bg-image">
+                <section>
+                    <h2><a href="">Matchmaking Service</a></h2>
+                </section>
             </div>
-            <div>
+            <div class="event-column">
                 <section>
                     <h2>Community Events</h2>
 
@@ -38,24 +40,24 @@ get_header();
                     while ( $eventsquery->have_posts() ) :
                         $eventsquery->the_post();
                     ?>
-                        <a href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
-                                <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
-                                <span>
-                                    <p><?php echo esc_html( get_field('event_date') ); ?></p>
-                                    <p><?php echo esc_html( get_field('event_time') ); ?></p>
-                                </span>
+                        <a class="event-card" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                            <span class="event-meta">
+                                <p><?php echo esc_html( get_field('event_date') ); ?></p>
+                                <p><?php echo esc_html( get_field('event_time') ); ?></p>    
+                            </span>
+                            <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
                         </a>
                     <?php endwhile; ?>
                     <!-- end of the loop -->
 
-
-                            <?php wp_reset_postdata(); ?>
-                   
+                    <?php wp_reset_postdata(); ?>
             
                 </section>
             </div>
-            <div>
-                <section><h2>Staffing Agency</h2></section>
+            <div class="bg-image">
+                <section>
+                    <h2><a href="">Staffing Agency</a></h2>
+                </section>
             </div>
         </div>
 

@@ -1,0 +1,42 @@
+.site-footer {
+  padding: 20px 40px;
+  h3 {
+    margin: 0;
+  }
+  p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .callout {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.site-header {
+  padding: 20px 40px;
+  h1 {
+    margin: 0;
+  }
+}

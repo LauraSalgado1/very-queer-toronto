@@ -1,21 +1,32 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+input[type="submit"],
+.button {
+  font-family: $font__heading;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  background: $color__background-button;
+  color: $color__background-screen;
+  line-height: 1;
+  padding: 12px 15px 10px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
+  &:hover {
+    background: $color__link-hover;
+    color: $color__background-screen;
+  }
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
+  &:active,
+  &:focus {
+    background: $color__link-hover;
+    color: $color__background-screen;
+  }
 }

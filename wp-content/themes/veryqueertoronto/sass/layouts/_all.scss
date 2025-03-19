@@ -1,5 +1,5 @@
 .site {
-  min-height: calc(100vh - 32px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -8,14 +8,56 @@
   flex-grow: 1;
   justify-content: stretch;
   display: flex;
+  width: 100%;
 }
 
 .three-columns {
   display: flex;
   flex-direction: row;
   width: 100%;
+  > div {
+    width: 33.3%;
+  }
 }
 
-.three-columns > div {
-  width: 33.3%;
+.event-card {
+  background: $color__background-screen;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  > h3,
+  p {
+    margin: 0;
+  }
+}
+
+.event-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bg-image {
+  background-image: url(https://picsum.photos/555/795);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin: 0;
+  }
+  a {
+    background: $color__background-screen;
+    padding: 40px;
+  }
+}
+
+.event-column {
+  section {
+    padding: 0 20px;
+  }
+  h2 {
+    text-align: center;
+  }
 }
