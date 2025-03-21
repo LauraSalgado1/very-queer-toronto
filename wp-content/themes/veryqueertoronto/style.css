@@ -533,23 +533,23 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
+a:not(.button) {
 	color: #484848;
 }
 
-a:visited {
+a:not(.button):visited {
 	color: #484848;
 }
 
-a:hover, a:focus, a:active {
+a:not(.button):hover, a:not(.button):focus, a:not(.button):active {
 	color: #f61600;
 }
 
-a:focus {
+a:not(.button):focus {
 	outline: thin dotted;
 }
 
-a:hover, a:active {
+a:not(.button):hover, a:not(.button):active {
 	outline: 0;
 }
 
