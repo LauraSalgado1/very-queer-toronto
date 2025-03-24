@@ -17,11 +17,17 @@ get_header();
 
 	<main id="primary" class="site-main">
         <div class="three-columns">
-            <div class="bg-image">
+            <?php
+            $leftColumn = get_field('left_column');
+            
+            if( $leftColumn ): ?>
+
+            <div class="bg-image" style="background-image: url(<?php echo esc_url( $leftColumn['background_image']['url'] ); ?>)">
                 <section>
-                    <h2><a href="">Matchmaking Service</a></h2>
+                    <h2><a href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>"><?php echo esc_html( $leftColumn['link']['title'] ); ?></a></h2>
                 </section>
             </div>
+            <?php endif; ?>
             <div class="event-column">
                 <section>
                     <h2>Community Events</h2>
@@ -31,7 +37,6 @@ get_header();
                             'post_type' => 'event',
                             'post_status' => 'publish',
                             'posts_per_page' => -1 
-
                         ) );
                      ?>
 
@@ -54,26 +59,18 @@ get_header();
             
                 </section>
             </div>
-            <div class="bg-image">
+            <?php
+            $rightColumn = get_field('right_column');
+            
+            if( $rightColumn ): ?>
+
+            <div class="bg-image" style="background-image: url(<?php echo esc_url( $rightColumn['background_image']['url'] ); ?>)">
                 <section>
-                    <h2><a href="">Staffing Agency</a></h2>
+                    <h2><a href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>"><?php echo esc_html( $rightColumn['link']['title'] ); ?></a></h2>
                 </section>
             </div>
+            <?php endif; ?>
         </div>
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
 
 	</main><!-- #main -->
 

@@ -693,7 +693,6 @@ textarea {
 }
 
 .bg-image {
-	background-image: url(https://picsum.photos/555/795);
 	background-size: cover;
 	display: flex;
 	justify-content: center;
