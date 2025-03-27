@@ -142,3 +142,9 @@ form {
     color: $color__background-button;
   }
 }
+
+.event-column section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
