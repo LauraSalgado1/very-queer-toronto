@@ -30,3 +30,17 @@ input[type="submit"],
     color: $color__background-screen;
   }
 }
+
+.button-reverse {
+  background: $color__link-hover;
+  &:hover {
+    background: $color__background-screen;
+    color: $color__link-hover;
+  }
+
+  &:active,
+  &:focus {
+    background: $color__background-screen;
+    color: $color__link-hover;
+  }
+}

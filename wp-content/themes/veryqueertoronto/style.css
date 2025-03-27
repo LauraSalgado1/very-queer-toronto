@@ -606,6 +606,20 @@ input[type="submit"]:focus,
 	color: #fff;
 }
 
+.button-reverse {
+	background: #c29f51;
+}
+
+.button-reverse:hover {
+	background: #fff;
+	color: #c29f51;
+}
+
+.button-reverse:active, .button-reverse:focus {
+	background: #fff;
+	color: #c29f51;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -673,7 +687,7 @@ textarea {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	min-height: 100vh;
+	min-height: calc(100vh - 85px);
 }
 
 .three-columns > div {
@@ -683,6 +697,15 @@ textarea {
 .wrapper {
 	width: 900px;
 	max-width: 100%;
+	margin: 0 auto;
+}
+
+.page-container {
+	padding: 60px 0 160px;
+}
+
+form {
+	width: 400px;
 	margin: 0 auto;
 }
 
@@ -743,6 +766,60 @@ textarea {
 
 .home-blocks {
 	width: 100%;
+}
+
+.vqt .acf-fields > .acf-field {
+	border-top: none;
+}
+
+.vqt input[type="text"],
+.vqt input[type="email"],
+.vqt input[type="url"],
+.vqt input[type="password"],
+.vqt input[type="search"],
+.vqt input[type="number"],
+.vqt input[type="tel"],
+.vqt input[type="range"],
+.vqt input[type="date"],
+.vqt input[type="month"],
+.vqt input[type="week"],
+.vqt input[type="time"],
+.vqt input[type="datetime"],
+.vqt input[type="datetime-local"],
+.vqt input[type="color"],
+.vqt textarea {
+	border-radius: 0;
+	border: 1px solid #c29f51;
+}
+
+.vqt select {
+	border: 1px solid #c29f51;
+}
+
+.vqt .acf-field input[type="text"],
+.vqt .acf-field input[type="password"],
+.vqt .acf-field input[type="date"],
+.vqt .acf-field input[type="datetime"],
+.vqt .acf-field input[type="datetime-local"],
+.vqt .acf-field input[type="email"],
+.vqt .acf-field input[type="month"],
+.vqt .acf-field input[type="number"],
+.vqt .acf-field input[type="search"],
+.vqt .acf-field input[type="tel"],
+.vqt .acf-field input[type="time"],
+.vqt .acf-field input[type="url"],
+.vqt .acf-field input[type="week"],
+.vqt .acf-field textarea,
+.vqt .acf-field select {
+	padding: 8px 16px;
+}
+
+.vqt .acf-form-submit {
+	padding-left: 12px;
+}
+
+.vqt .acf-required {
+	color: #494949;
 }
 
 /*--------------------------------------------------------------
@@ -974,6 +1051,7 @@ textarea {
 
 .site-header {
 	padding: 20px 40px;
+	background: #494949;
 }
 
 .site-header .custom-logo-link {
@@ -981,11 +1059,13 @@ textarea {
 }
 
 .site-footer {
-	padding: 20px 40px;
+	padding: 40px 40px 20px;
+	background: #494949;
+	color: #fff;
 }
 
 .site-footer h3 {
-	margin: 0;
+	margin: 0 0 5px;
 }
 
 .site-footer p {
@@ -995,10 +1075,6 @@ textarea {
 
 .site-footer .callout {
 	margin-bottom: 40px;
-}
-
-.site-footer .callout h3 {
-	margin-bottom: 5px;
 }
 
 .footer-wrapper {
@@ -1018,6 +1094,7 @@ textarea {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: #fff;
 }
 
 .socials svg {

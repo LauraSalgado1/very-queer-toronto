@@ -18,7 +18,7 @@
 
 			<div class="callout">
 				<h3>List your event with us!</h3>
-				<a class="button" href="/sample-page">Event Submissions</a>
+				<a class="button button-reverse" href="/submit-an-event">Event Submissions</a>
 			</div>
 		
 			<p>&copy; VQT Events <?php echo date('Y'); ?>. All rights reserved.</p>
