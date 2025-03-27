@@ -1,15 +1,15 @@
 {
-    "key": "group_67d872d6b34e1",
-    "title": "Event Posts",
+    "key": "group_67e467d456d0d",
+    "title": "Staffing Agency Request",
     "fields": [
         {
-            "key": "field_67d9c535c91cd",
-            "label": "Contact Name",
-            "name": "contact_name",
+            "key": "field_67e467d45b940",
+            "label": "Type of Event",
+            "name": "type_of_event",
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -24,93 +24,42 @@
             "append": ""
         },
         {
-            "key": "field_67d9c56cc91ce",
-            "label": "Contact Phone",
-            "name": "contact_phone",
+            "key": "field_67e4683f5b941",
+            "label": "Staffing Type",
+            "name": "staffing_type",
             "aria-label": "",
-            "type": "text",
+            "type": "select",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
+            "choices": {
+                "bar": "Bar Services",
+                "cleaning": "Cleaning services"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_custom": 0,
             "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67d9c5a4c91cf",
-            "label": "Contact Email",
-            "name": "contact_email",
-            "aria-label": "",
-            "type": "email",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
+            "search_placeholder": "",
+            "allow_null": 0,
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "ui": 0,
+            "ajax": 0
         },
         {
-            "key": "field_67d872d7d414e",
-            "label": "Event Title",
-            "name": "event_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_67d8731fd414f",
-            "label": "Event Link",
-            "name": "event_link",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_67d8733bd4150",
-            "label": "Event Date",
-            "name": "event_date",
+            "key": "field_67e468d15b942",
+            "label": "Date",
+            "name": "date",
             "aria-label": "",
             "type": "date_picker",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -123,29 +72,11 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_67d8738ad4151",
-            "label": "Event Time",
-            "name": "event_time",
+            "key": "field_67e468f15b943",
+            "label": "How many crew",
+            "name": "how_many_crew",
             "aria-label": "",
-            "type": "time_picker",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "g:ia",
-            "return_format": "g:i a",
-            "allow_in_bindings": 0
-        },
-        {
-            "key": "field_67e4545c90474",
-            "label": "VQT Event",
-            "name": "vqt_event",
-            "aria-label": "",
-            "type": "true_false",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -154,12 +85,77 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
+            "default_value": "",
+            "maxlength": "",
             "allow_in_bindings": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e4690a5b944",
+            "label": "Event Capacity",
+            "name": "event_capacity",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67e4691d5b945",
+            "label": "Additional Info",
+            "name": "additional_info",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_67e469335b946",
+            "label": "Contact Info",
+            "name": "contact_info",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -167,7 +163,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "event"
+                "value": "post"
             }
         ]
     ],
@@ -187,5 +183,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1743018834
+    "modified": 1743022426
 }

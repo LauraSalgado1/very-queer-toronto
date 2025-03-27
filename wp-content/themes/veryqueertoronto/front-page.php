@@ -16,6 +16,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+        <h1 class="screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
         <div class="three-columns">
             <?php
             $leftColumn = get_field('left_column');
@@ -46,6 +47,12 @@ get_header();
                         $eventsquery->the_post();
                     ?>
                         <a class="event-card" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                            <?php
+                                if( get_field('vqt_event') ) {
+                                    // Do something.
+                                    echo '<span class="capsule">VQT Event</span>';
+                                }
+                            ?>
                             <span class="event-meta">
                                 <p><?php echo esc_html( get_field('event_date') ); ?></p>
                                 <p><?php echo esc_html( get_field('event_time') ); ?></p>    
@@ -71,6 +78,20 @@ get_header();
             </div>
             <?php endif; ?>
         </div>
+
+        <div class="wrapper">
+            <?php
+            while ( have_posts() ) :
+                the_post();
+
+                get_template_part( 'template-parts/content', 'page-front' );
+
+            endwhile; // End of the loop.
+            ?>
+
+        </div>
+
+  
 
 	</main><!-- #main -->
 

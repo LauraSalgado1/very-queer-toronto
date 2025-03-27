@@ -14,6 +14,8 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer-wrapper">
 		<div class="site-info">
+			<img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/images/VQT PNG 02 V01 copy.png" />
+
 			<div class="callout">
 				<h3>List your event with us!</h3>
 				<a class="button" href="/sample-page">Event Submissions</a>

@@ -388,9 +388,12 @@ select,
 optgroup,
 textarea {
 	color: #484848;
-	font-family: "Merriweather", serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
 
 h1,
@@ -400,7 +403,11 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: "League Spartan", "Helvetica Neue", sans-serif;
+	font-family: "Open Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
 }
 
 h1 a,
@@ -467,7 +474,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #efefed;
+	background: #f7f7f7;
 }
 
 hr {
@@ -542,7 +549,7 @@ a:not(.button):visited {
 }
 
 a:not(.button):hover, a:not(.button):focus, a:not(.button):active {
-	color: #f61600;
+	color: #c29f51;
 }
 
 a:not(.button):focus {
@@ -560,11 +567,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	font-family: "League Spartan", "Helvetica Neue", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	text-decoration: none;
 	border: none;
 	border-radius: 0;
-	background: #484848;
+	background: #494949;
 	color: #fff;
 	line-height: 1;
 	padding: 12px 15px 10px;
@@ -582,7 +589,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .button:hover {
-	background: #f61600;
+	background: #c29f51;
 	color: #fff;
 }
 
@@ -595,7 +602,7 @@ input[type="submit"]:active,
 input[type="submit"]:focus,
 .button:active,
 .button:focus {
-	background: #f61600;
+	background: #c29f51;
 	color: #fff;
 }
 
@@ -660,18 +667,23 @@ textarea {
 .site-main {
 	flex-grow: 1;
 	justify-content: stretch;
-	display: flex;
-	width: 100%;
 }
 
 .three-columns {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
+	min-height: 100vh;
 }
 
 .three-columns > div {
 	width: 33.3%;
+}
+
+.wrapper {
+	width: 900px;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 .event-card {
@@ -679,11 +691,23 @@ textarea {
 	display: block;
 	padding: 20px;
 	text-decoration: none;
+	margin-bottom: 20px;
 }
 
 .event-card > h3,
 .event-card p {
 	margin: 0;
+}
+
+.capsule {
+	background: #c29f51;
+	color: #fff;
+	display: inline-flex;
+	padding: 4px 8px;
+	border-radius: 20px;
+	font-size: 0.9rem;
+	margin-bottom: 8px;
+	letter-spacing: 0.7px;
 }
 
 .event-meta {
@@ -697,6 +721,7 @@ textarea {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-position: center;
 }
 
 .bg-image h2 {
@@ -714,6 +739,10 @@ textarea {
 
 .event-column h2 {
 	text-align: center;
+}
+
+.home-blocks {
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -817,8 +846,7 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
+.post {
 	margin: 0 0 1.5em;
 }
 
@@ -944,6 +972,14 @@ textarea {
 	display: block;
 }
 
+.site-header {
+	padding: 20px 40px;
+}
+
+.site-header .custom-logo-link {
+	width: 100px;
+}
+
 .site-footer {
 	padding: 20px 40px;
 }
@@ -958,7 +994,11 @@ textarea {
 }
 
 .site-footer .callout {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+.site-footer .callout h3 {
+	margin-bottom: 5px;
 }
 
 .footer-wrapper {
@@ -985,12 +1025,9 @@ textarea {
 	height: 30px;
 }
 
-.site-header {
-	padding: 20px 40px;
-}
-
-.site-header h1 {
-	margin: 0;
+.footer-logo {
+	width: 180px;
+	margin-bottom: 40px;
 }
 
 /*--------------------------------------------------------------

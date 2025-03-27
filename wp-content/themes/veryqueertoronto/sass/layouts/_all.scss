@@ -7,17 +7,22 @@
 .site-main {
   flex-grow: 1;
   justify-content: stretch;
-  display: flex;
-  width: 100%;
 }
 
 .three-columns {
   display: flex;
   flex-direction: row;
   width: 100%;
+  min-height: 100vh;
   > div {
     width: 33.3%;
   }
+}
+
+.wrapper {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .event-card {
@@ -25,10 +30,22 @@
   display: block;
   padding: 20px;
   text-decoration: none;
+  margin-bottom: 20px;
   > h3,
   p {
     margin: 0;
   }
+}
+
+.capsule {
+  background: $color__link-hover;
+  color: $color__background-screen;
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.7px;
 }
 
 .event-meta {
@@ -42,6 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position: center;
 
   h2 {
     margin: 0;
@@ -59,4 +77,8 @@
   h2 {
     text-align: center;
   }
+}
+
+.home-blocks {
+  width: 100%;
 }

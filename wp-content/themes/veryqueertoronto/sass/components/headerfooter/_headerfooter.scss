@@ -1,3 +1,10 @@
+.site-header {
+  padding: 20px 40px;
+  .custom-logo-link {
+    width: 100px;
+  }
+}
+
 .site-footer {
   padding: 20px 40px;
   h3 {
@@ -8,7 +15,10 @@
     margin: 0;
   }
   .callout {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    h3 {
+      margin-bottom: 5px;
+    }
   }
 }
 
@@ -34,9 +44,7 @@
   }
 }
 
-.site-header {
-  padding: 20px 40px;
-  h1 {
-    margin: 0;
-  }
+.footer-logo {
+  width: 180px;
+  margin-bottom: 40px;
 }

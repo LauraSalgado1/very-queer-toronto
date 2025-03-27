@@ -6,6 +6,10 @@ h5,
 h6 {
   clear: both;
   font-family: $font__heading;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
   a {
     text-decoration: none;
   }
