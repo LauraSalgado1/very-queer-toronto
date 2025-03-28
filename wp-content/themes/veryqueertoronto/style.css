@@ -685,19 +685,43 @@ textarea {
 
 .three-columns {
 	display: flex;
-	flex-direction: row;
-	width: 100%;
-	min-height: calc(100vh - 85px);
+	flex-direction: column;
 }
 
-.three-columns > div {
-	width: 33.3%;
+.event-column {
+	order: -1;
+}
+
+.event-column section {
+	padding: 0 60px;
+}
+
+.event-column h2 {
+	text-align: center;
+}
+
+@media (min-width: 1100px) {
+	.three-columns {
+		flex-direction: row;
+		width: 100%;
+		min-height: calc(100vh - 85px);
+	}
+	.three-columns > div {
+		width: 33.3%;
+	}
+	.event-column {
+		order: 0;
+	}
+	.event-column section {
+		padding: 0 20px;
+	}
 }
 
 .wrapper {
 	width: 900px;
 	max-width: 100%;
 	margin: 0 auto;
+	padding: 0 40px;
 }
 
 .page-container {
@@ -745,23 +769,18 @@ form {
 	justify-content: center;
 	align-items: center;
 	background-position: center;
+	padding: 40px;
 }
 
 .bg-image h2 {
 	margin: 0;
+	text-align: center;
 }
 
 .bg-image a {
 	background: #fff;
 	padding: 40px;
-}
-
-.event-column section {
-	padding: 0 20px;
-}
-
-.event-column h2 {
-	text-align: center;
+	display: block;
 }
 
 .home-blocks {
@@ -822,10 +841,8 @@ form {
 	color: #494949;
 }
 
-.event-column section {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+.vqt-event-checkbox {
+	display: none;
 }
 
 /*--------------------------------------------------------------

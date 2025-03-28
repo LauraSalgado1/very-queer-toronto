@@ -62,8 +62,11 @@
 // import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 document.addEventListener( 'DOMContentLoaded', function() {
-	
-	var splide = new Splide( '.splide', {
+
+	let splideExists = document.querySelector('.splide');
+
+	if ( splideExists) {
+			var splide = new Splide( '.splide', {
 		direction: 'ttb',
 		height   : '795px',
 		type     : 'loop',
@@ -76,6 +79,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	} );
 
 	splide.mount(window.splide.Extensions);
+
+	}
+	
+
 
 } );
 

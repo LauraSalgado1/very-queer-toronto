@@ -33,54 +33,46 @@ get_header();
                 <section>
                     <h2>Community Events</h2>
 
-                            <?php
-                                $eventsquery = new WP_Query( array( 
-                                    'post_type' => 'event',
-                                    'post_status' => 'publish',
-                                    'posts_per_page' => -1 
-                                ) );
-                            ?>
+                    <?php
+                        $eventsquery = new WP_Query( array( 
+                            'post_type' => 'event',
+                            'post_status' => 'publish',
+                            'posts_per_page' => -1 
+                        ) );
+                    ?>
 
-                    
-                
-      
-                            <section class="splide" aria-label="Splide Basic HTML Example">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                                    <!-- the loop -->
-                            <?php
-                            while ( $eventsquery->have_posts() ) :
-                                $eventsquery->the_post();
-                            ?>
-                             <li class="splide__slide">
-                                                
-                                            
-                                <a class="event-card" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
-                                    <?php
-                                        if( get_field('vqt_event') ) {
-                                            // Do something.
-                                            echo '<span class="capsule">VQT Event</span>';
-                                        }
-                                    ?>
-                                    <span class="event-meta">
-                                        <p><?php echo esc_html( get_field('event_date') ); ?></p>
-                                        <p><?php echo esc_html( get_field('event_time') ); ?></p>    
-                                    </span>
-                                    <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
-                                </a>
+                    <div class="splide" aria-label="Community Events">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <?php
+                                while ( $eventsquery->have_posts() ) :
+                                    $eventsquery->the_post();
+                                ?>
+                                <li class="splide__slide"> 
+                                    <a class="event-card" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                                        <?php
+                                            if( get_field('vqt_event') ) {
+                                                // Do something.
+                                                echo '<span class="capsule">VQT Event</span>';
+                                            }
+                                        ?>
+                                        <span class="event-meta">
+                                            <p><?php echo esc_html( get_field('event_date') ); ?></p>
+                                            <span>
+                                                <?php echo esc_html( get_field('event_time') ); ?>
+                                                <?php if( get_field('event_end_time') ): ?>
+                                                     - <?php echo esc_html( get_field('event_end_time') ); ?>
+                                                <?php endif; ?>  
+                                            </span>
+                                        </span>
+                                        <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
+                                    </a>
                                 </li>
-                            <?php endwhile; ?>
-                            <!-- end of the loop -->
-
-                            <?php wp_reset_postdata(); ?>
-                                           
-                                        </ul>
-                                </div>
-                            </section>
-
-   
-          
-            
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>    
+                            </ul>
+                        </div>
+                    </div>
                 </section>
             </div>
             <?php
