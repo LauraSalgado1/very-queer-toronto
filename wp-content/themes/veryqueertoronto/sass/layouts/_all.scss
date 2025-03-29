@@ -28,7 +28,7 @@
   .three-columns {
     flex-direction: row;
     width: 100%;
-    min-height: calc(100vh - 85px);
+    // min-height: calc(100vh - 85px);
     > div {
       width: 33.3%;
     }
@@ -54,7 +54,10 @@
 
 form {
   width: 400px;
-  margin: 0 auto;
+  background: $color__background-screen;
+  padding: 20px 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .event-card {
@@ -63,6 +66,8 @@ form {
   padding: 20px;
   text-decoration: none;
   margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   > h3,
   p {
     margin: 0;
@@ -87,21 +92,46 @@ form {
 }
 
 .bg-image {
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  padding: 40px;
-
   h2 {
     margin: 0;
     text-align: center;
   }
   a {
-    background: $color__background-screen;
-    padding: 40px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: calc(100vh - 85px);
+    overflow: hidden;
+    color: $color__background-screen !important;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      opacity: 0.7;
+      transition: opacity 0.1s ease;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
 }
 
@@ -131,9 +161,11 @@ form {
   textarea {
     border-radius: 0;
     border: 1px solid $color__link-hover;
+    background: $color__background-body;
   }
   select {
     border: 1px solid $color__link-hover;
+    background: $color__background-body;
   }
   .acf-field input[type="text"],
   .acf-field input[type="password"],
@@ -162,4 +194,39 @@ form {
 
 .vqt-event-checkbox {
   display: none;
+}
+
+.page-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon {
+  width: 300px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 80px;
+}
+
+.options > div {
+  padding: 60px 60px 0 0;
+  p {
+    max-width: 325px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.half-info {
+  padding-right: 60px;
+  p {
+    max-width: 325px;
+  }
 }

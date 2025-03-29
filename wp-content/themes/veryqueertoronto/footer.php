@@ -66,9 +66,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	let splideExists = document.querySelector('.splide');
 
 	if ( splideExists) {
-			var splide = new Splide( '.splide', {
+		var splide = new Splide( '.splide', {
 		direction: 'ttb',
-		height   : '795px',
+		height   : '763px',
 		type     : 'loop',
 		drag   : 'free',
 		focus  : 'center',

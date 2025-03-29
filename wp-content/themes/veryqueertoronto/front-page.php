@@ -23,9 +23,15 @@ get_header();
             
             if( $leftColumn ): ?>
 
-            <div class="bg-image" style="background-image: url(<?php echo esc_url( $leftColumn['background_image']['url'] ); ?>)">
+            <div class="bg-image">
                 <section>
-                    <h2><a href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>"><?php echo esc_html( $leftColumn['link']['title'] ); ?></a></h2>
+                    <h2>
+                        <a href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">
+                           
+                            <img src="<?php echo esc_url($leftColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $leftColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $leftColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $leftColumn['background_image']['height'] ); ?>" >
+                            <span class=""><?php echo esc_html( $leftColumn['link']['title'] ); ?></span>
+                        </a>
+                    </h2>
                 </section>
             </div>
             <?php endif; ?>
@@ -80,9 +86,15 @@ get_header();
             
             if( $rightColumn ): ?>
 
-            <div class="bg-image" style="background-image: url(<?php echo esc_url( $rightColumn['background_image']['url'] ); ?>)">
+            <div class="bg-image">
                 <section>
-                    <h2><a href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>"><?php echo esc_html( $rightColumn['link']['title'] ); ?></a></h2>
+                    <h2>
+                        <a href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
+                           
+                            <img src="<?php echo esc_url($rightColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $rightColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $rightColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $rightColumn['background_image']['height'] ); ?>" >
+                            <span class=""><?php echo esc_html( $rightColumn['link']['title'] ); ?></span>
+                        </a>
+                    </h2>
                 </section>
             </div>
             <?php endif; ?>

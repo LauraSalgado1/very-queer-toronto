@@ -24,35 +24,6 @@
             "append": ""
         },
         {
-            "key": "field_67e4683f5b941",
-            "label": "Staffing Type",
-            "name": "staffing_type",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "bar": "Bar Services",
-                "cleaning": "Cleaning services"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_custom": 0,
-            "placeholder": "",
-            "search_placeholder": "",
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0
-        },
-        {
             "key": "field_67e468d15b942",
             "label": "Date",
             "name": "date",
@@ -183,5 +154,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1743022426
+    "modified": 1743211460
 }
