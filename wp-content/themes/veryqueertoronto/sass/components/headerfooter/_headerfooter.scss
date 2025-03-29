@@ -1,5 +1,8 @@
 .site-header {
-  padding: 10px 40px;
+  padding: 10px 20px;
+  @media (min-width: 720px) {
+    padding: 10px 40px;
+  }
   background: #283e40;
   .custom-logo-link {
     width: 300px;
@@ -7,7 +10,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    // gap: 8px;
     color: $color__link-hover !important;
     font-size: 1.6rem;
     text-decoration: none;
@@ -23,15 +25,22 @@
 }
 
 .site-footer {
-  padding: 40px 40px 20px;
+  padding: 40px 20px 20px;
   background: #283e40;
   color: $color__background-screen;
+  @media (min-width: 720px) {
+    padding: 40px 40px 20px;
+  }
   h3 {
     margin: 0 0 5px;
   }
   p {
     font-size: 0.8rem;
     margin: 0;
+    text-align: center;
+    @media (min-width: 760px) {
+      text-align: left;
+    }
   }
   .callout {
     margin-bottom: 40px;
@@ -40,15 +49,25 @@
 
 .footer-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 40px;
+  @media (min-width: 760px) {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .socials {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  @media (min-width: 760px) {
+    justify-content: flex-end;
+  }
+
   align-items: center;
   gap: 20px;
+  margin-bottom: 40px;
   a {
     display: flex;
     justify-content: center;

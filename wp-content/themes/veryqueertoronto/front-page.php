@@ -46,7 +46,9 @@ get_header();
                         ) );
                     ?>
 
-                    <div class="splide" aria-label="Community Events">
+           
+
+                    <div class="splide desktop-scroll" aria-label="Community Events">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <?php
@@ -79,6 +81,40 @@ get_header();
                             </ul>
                         </div>
                     </div>
+
+                    <ul class="events-mobile list-no-style">
+                        <?php
+                        while ( $eventsquery->have_posts() ) :
+                            $eventsquery->the_post();
+                            $vqtEvent = get_field('vqt_event');
+                        ?>
+                        <li class=""> 
+                            <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                                <?php
+                                    if( get_field('vqt_event') ) {
+                                        // Do something.
+                                        echo '<span class="capsule">VQT Event</span>';
+                                    }
+                                ?>
+                                <span class="event-meta">
+                                    <span><?php echo esc_html( get_field('event_date') ); ?></span>
+                                    <span>
+                                        <?php echo esc_html( get_field('event_time') ); ?>
+                                        <?php if( get_field('event_end_time') ): ?>
+                                                - <?php echo esc_html( get_field('event_end_time') ); ?>
+                                        <?php endif; ?>  
+                                    </span>
+                                </span>
+                                <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
+                            </a>
+                        </li>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>    
+                    </ul>
+
+                    <div class="button-center button-mobile">
+                        <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
+                    </div>
                 </section>
             </div>
             <?php
@@ -100,7 +136,7 @@ get_header();
         </div>
 
         <div class="wrapper">
-            <div class="button-center">
+            <div class="button-center button-desktop">
                 <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
             </div>
             <?php

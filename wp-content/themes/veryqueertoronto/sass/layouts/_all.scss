@@ -18,14 +18,45 @@
 .event-column {
   order: -1;
   background: $color__background-body;
-  border-left: 2px solid $color__link-hover;
-  border-right: 2px solid $color__link-hover;
+  @media (min-width: 760px) {
+    border-left: 2px solid $color__link-hover;
+    border-right: 2px solid $color__link-hover;
+  }
+
   section {
-    padding: 0 60px;
+    padding: 0 20px 40px;
+    @media (min-width: 760px) {
+      padding: 0 60px;
+    }
   }
   h2 {
     text-align: center;
     color: white;
+  }
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.desktop-scroll,
+.button-desktop.button-center {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .desktop-scroll {
+    display: block;
+  }
+  .button-desktop.button-center {
+    display: flex;
+  }
+  .events-mobile,
+  .button-mobile {
+    display: none;
   }
 }
 
@@ -137,13 +168,6 @@ form {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
   }
-}
-
-.button-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
 }
 
 .home-blocks {
