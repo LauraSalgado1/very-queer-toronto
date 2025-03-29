@@ -24,15 +24,14 @@ get_header();
             if( $leftColumn ): ?>
 
             <div class="bg-image">
-                <section>
-                    <h2>
-                        <a href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">
-                           
-                            <img src="<?php echo esc_url($leftColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $leftColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $leftColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $leftColumn['background_image']['height'] ); ?>" >
-                            <span class=""><?php echo esc_html( $leftColumn['link']['title'] ); ?></span>
-                        </a>
-                    </h2>
-                </section>
+                <img src="<?php echo esc_url($leftColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $leftColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $leftColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $leftColumn['background_image']['height'] ); ?>" >
+   
+                <h2>
+                    <a href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">
+                       <?php echo esc_html( $leftColumn['link']['title'] ); ?>
+                    </a>
+                </h2>
+
             </div>
             <?php endif; ?>
             <div class="event-column">
@@ -53,9 +52,10 @@ get_header();
                                 <?php
                                 while ( $eventsquery->have_posts() ) :
                                     $eventsquery->the_post();
+                                    $vqtEvent = get_field('vqt_event');
                                 ?>
                                 <li class="splide__slide"> 
-                                    <a class="event-card" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                                    <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
                                         <?php
                                             if( get_field('vqt_event') ) {
                                                 // Do something.
@@ -63,7 +63,7 @@ get_header();
                                             }
                                         ?>
                                         <span class="event-meta">
-                                            <p><?php echo esc_html( get_field('event_date') ); ?></p>
+                                            <span><?php echo esc_html( get_field('event_date') ); ?></span>
                                             <span>
                                                 <?php echo esc_html( get_field('event_time') ); ?>
                                                 <?php if( get_field('event_end_time') ): ?>
@@ -87,20 +87,22 @@ get_header();
             if( $rightColumn ): ?>
 
             <div class="bg-image">
-                <section>
-                    <h2>
-                        <a href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
-                           
-                            <img src="<?php echo esc_url($rightColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $rightColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $rightColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $rightColumn['background_image']['height'] ); ?>" >
-                            <span class=""><?php echo esc_html( $rightColumn['link']['title'] ); ?></span>
-                        </a>
-                    </h2>
-                </section>
+                <img src="<?php echo esc_url($rightColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $rightColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $rightColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $rightColumn['background_image']['height'] ); ?>" >
+
+                <h2>
+                    <a href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
+                        <?php echo esc_html( $rightColumn['link']['title'] ); ?>
+                    </a>
+                </h2>
+
             </div>
             <?php endif; ?>
         </div>
 
         <div class="wrapper">
+            <div class="button-center">
+                <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
+            </div>
             <?php
             while ( have_posts() ) :
                 the_post();

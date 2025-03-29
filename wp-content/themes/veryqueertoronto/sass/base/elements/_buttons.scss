@@ -3,19 +3,19 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
+  border-radius: 40px;
+  font-size: 1.2rem;
+  text-align: center;
   font-family: $font__heading;
   text-decoration: none;
   border: none;
-  border-radius: 0;
   background: $color__background-button;
   color: $color__background-screen;
   line-height: 1;
-  padding: 12px 15px 10px;
-  height: 50px;
-  display: flex;
+  padding: 12px 30px 14px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
 

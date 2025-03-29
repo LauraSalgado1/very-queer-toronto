@@ -16,10 +16,10 @@
 		<div class="site-info">
 			<img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/images/VQT PNG 02 V01 copy.png" />
 
-			<div class="callout">
+			<!-- <div class="callout">
 				<h3>List your event with us!</h3>
 				<a class="button button-reverse" href="/submit-an-event">Event Submissions</a>
-			</div>
+			</div> -->
 		
 			<p>&copy; VQT Events <?php echo date('Y'); ?>. All rights reserved.</p>
 		</div><!-- .site-info -->
@@ -68,13 +68,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	if ( splideExists) {
 		var splide = new Splide( '.splide', {
 		direction: 'ttb',
-		height   : '763px',
+		height   : '766px',
+		autoHeight: true,
 		type     : 'loop',
 		drag   : 'free',
 		focus  : 'center',
 		perPage: 5,
 		autoScroll: {
-			speed: .4,
+			speed: .5,
 		},
 	} );
 

@@ -34,8 +34,15 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
+			//the_custom_logo();
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			?>
+			<a href="/" class="custom-logo-link" rel="home">
+				<img src="<?php echo $image[0] ?>" alt="VQT" width="150" height="59" />
+				<span>Events</span>
+			</a>
+			
 			
 
 			<?php
