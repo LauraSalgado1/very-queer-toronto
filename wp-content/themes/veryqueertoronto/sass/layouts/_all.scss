@@ -84,11 +84,13 @@
 }
 
 .page-container {
-  padding: 60px 0 160px;
+  padding-top: 60px;
+  padding-bottom: 160px;
 }
 
 form {
   width: 400px;
+  max-width: 100%;
   background: $color__background-screen;
   padding: 20px 20px 40px;
   border-radius: 20px;
@@ -240,21 +242,28 @@ form {
 }
 
 .options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 760px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   margin-bottom: 80px;
 }
 
 .options > div {
-  padding: 60px 60px 0 0;
-  p {
-    max-width: 325px;
+  padding: 60px 0 0 0;
+  @media (min-width: 760px) {
+    padding: 60px 60px 0 0;
+    p {
+      max-width: 325px;
+    }
   }
 }
 
 .form-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 760px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .half-info {
@@ -262,4 +271,15 @@ form {
   p {
     max-width: 325px;
   }
+}
+
+.vqt-paypal-wrapper {
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+.form-with-payment:has(.acfe-form) .vqt-paypal-wrapper {
+  display: none;
 }

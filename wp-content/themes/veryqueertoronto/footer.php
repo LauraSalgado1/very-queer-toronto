@@ -70,7 +70,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		focus  : 'center',
 		perPage: 5,
 		autoScroll: {
-			speed: .5,
+			speed: .7,
 		},
 	} );
 
