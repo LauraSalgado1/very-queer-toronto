@@ -232,9 +232,11 @@ form {
 }
 
 .page-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @media (min-width: 760px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .icon {
@@ -267,9 +269,11 @@ form {
 }
 
 .half-info {
-  padding-right: 60px;
-  p {
-    max-width: 325px;
+  @media (min-width: 760px) {
+    padding-right: 60px;
+    p {
+      max-width: 325px;
+    }
   }
 }
 

@@ -73,6 +73,13 @@
     justify-content: center;
     align-items: center;
     color: $color__background-screen;
+    &:visited {
+      color: $color__background-screen;
+    }
+    &:hover,
+    &:focus {
+      color: $color__link-hover;
+    }
   }
   svg {
     width: 30px;

@@ -142,9 +142,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_type",
                 "operator": "==",
-                "value": "124"
+                "value": "front_page"
             }
         ]
     ],
@@ -164,5 +164,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1743215016
+    "modified": 1743539588
 }

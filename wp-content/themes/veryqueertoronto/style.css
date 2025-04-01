@@ -962,10 +962,12 @@ form {
 	display: none;
 }
 
-.page-header {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+@media (min-width: 760px) {
+	.page-header {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
 }
 
 .icon {
@@ -1003,12 +1005,13 @@ form {
 	}
 }
 
-.half-info {
-	padding-right: 60px;
-}
-
-.half-info p {
-	max-width: 325px;
+@media (min-width: 760px) {
+	.half-info {
+		padding-right: 60px;
+	}
+	.half-info p {
+		max-width: 325px;
+	}
 }
 
 .vqt-paypal-wrapper h3 {
@@ -1344,6 +1347,14 @@ form {
 	justify-content: center;
 	align-items: center;
 	color: #fff;
+}
+
+.socials a:visited {
+	color: #fff;
+}
+
+.socials a:hover, .socials a:focus {
+	color: #c29f51;
 }
 
 .socials svg {
