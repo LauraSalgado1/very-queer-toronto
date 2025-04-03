@@ -48,7 +48,7 @@ get_header();
                             </script>
                         </div>
                         <p>Once payment is received, your event will be reviewed before it is promoted on the site.</p>
-                        <p>Any questions? Please reach out at:</p><a class="button" href="mailto=vqtevents@gmail.com">vqtevents@gmail.com</a>  
+                        <p>Any questions? Please reach out at:</p><a class="button" href="mailto:vqtevents@gmail.com">vqtevents@gmail.com</a>  
 					</div>
 				</div>
 		</div>

@@ -79,6 +79,9 @@
     &:hover,
     &:focus {
       color: $color__link-hover;
+      svg {
+        fill: $color__link-hover;
+      }
     }
   }
   svg {
