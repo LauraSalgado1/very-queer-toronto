@@ -44,7 +44,7 @@
         },
         {
             "key": "field_67e468f15b943",
-            "label": "How many crew",
+            "label": "How many staff are needed",
             "name": "how_many_crew",
             "aria-label": "",
             "type": "text",
@@ -65,7 +65,7 @@
         },
         {
             "key": "field_67e4690a5b944",
-            "label": "Event Capacity",
+            "label": "Approximate number of guests",
             "name": "event_capacity",
             "aria-label": "",
             "type": "text",
@@ -154,5 +154,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1743802542
+    "modified": 1743802747
 }
