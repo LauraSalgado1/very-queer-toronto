@@ -140,6 +140,7 @@ add_action( 'widgets_init', 'veryqueertoronto_widgets_init' );
 function veryqueertoronto_scripts() {
 	wp_enqueue_style( 'veryqueertoronto-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'veryqueertoronto-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array());
 
 	wp_enqueue_script( 'veryqueertoronto-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'veryqueertoronto-animatedQuestions', get_template_directory_uri() . '/js/animatedQuestions.js', array(), _S_VERSION, true );
@@ -149,6 +150,8 @@ function veryqueertoronto_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'veryqueertoronto_scripts' );
+
+
 
 /**
  * Implement the Custom Header feature.

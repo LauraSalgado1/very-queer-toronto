@@ -20,10 +20,11 @@ get_header();
 
 		<div class="matchmaking-container page-form page-container wrapper">
 
-				<h1>Matchmaking Services</h1>
+				<h1 class="screen-reader-text">Matchmaking Services</h1>
 
-                <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?>
                 
+
+                <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?>  
 		</div>
 
 		<?php

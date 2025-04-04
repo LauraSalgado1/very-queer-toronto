@@ -56,7 +56,7 @@ get_header();
 					</div>
 					<div class="half-form">
 						<?php // local echo do_shortcode('[acfe_form ID="149"]'); ?>
-						<?php  echo do_shortcode('[acfe_form ID="145"]'); ?>
+						<?php echo do_shortcode('[acfe_form ID="145"]'); ?>
 					</div>
 				</div>
 		</div>
