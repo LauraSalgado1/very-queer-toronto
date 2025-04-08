@@ -1,3 +1,9 @@
+img,
+svg {
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
 .site {
   min-height: 100vh;
   display: flex;
@@ -137,6 +143,7 @@ form:not(.matchmaking) {
   align-items: center;
   overflow: hidden;
   z-index: 1;
+  padding: 40px 80px;
   h2 {
     margin: 0;
     text-align: center;
@@ -152,7 +159,7 @@ form:not(.matchmaking) {
       border-bottom: 2px solid $color__link-hover !important;
     }
   }
-  img {
+  > img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -308,24 +315,95 @@ form:not(.matchmaking) {
 }
 
 .vqt .matchmaking-container .acf-required {
-  color: #fff;
+  color: #494949;
 }
 
 .mm-question {
-  width: 400px;
-  margin: 0 auto;
+  color: #494949;
+  background: #fff;
+  padding: 2px 50px 10px;
+  border-radius: 60px;
 }
 
 .mm-question[aria-hidden="true"],
 .button-hidden,
 .acf-field-acfe-button .acf-label {
-  display: none;
+  display: none !important;
 }
 
 .button-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 400px;
-  margin: 0 auto;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px auto 0;
+  .acf-field {
+    margin: 0;
+  }
+}
+
+.matchmaking-modal {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  border-radius: 40px;
+  right: 40px;
+}
+
+// .mm-intro {
+//   transition: transform 0.4s ease;
+// }
+
+.mm-intro.modal-is-open {
+  transform: translateY(-200%);
+  position: absolute;
+}
+
+.mm-modal[aria-hidden="true"] {
+  display: none;
+}
+
+.mm-modal-button-wrapper {
+  text-align: left;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  z-index: 6;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  span {
+    font-weight: 600;
+  }
+  &:before {
+    display: none;
+  }
+  &:hover {
+    background: transparent;
+  }
+  > img {
+    width: 110px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+  }
+  > span {
+    flex-grow: 1;
+  }
+  .speech {
+    color: $color__background-button;
+    background: $color__background-screen;
+    padding: 20px;
+    border-radius: 1e3px;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .yes-container {
+    display: flex;
+    margin: 10px 0 0 auto;
+    width: fit-content;
+  }
 }

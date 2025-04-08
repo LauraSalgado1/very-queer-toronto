@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_67eefcbce9b17",
-            "label": "What's your first name?",
+            "label": "What's the age range of your desired partner?",
             "name": "question_one",
             "aria-label": "",
             "type": "text",
@@ -55,7 +55,7 @@
         },
         {
             "key": "field_67eefd5fe9b18",
-            "label": "Hi ______, what’s your current relationship status?",
+            "label": "What’s your current relationship status?",
             "name": "question_two",
             "aria-label": "",
             "type": "radio",
@@ -105,7 +105,7 @@
             },
             "button_value": "Next",
             "button_type": "button",
-            "button_class": "next-button button-hidden mm-button",
+            "button_class": "next-button  mm-button",
             "button_id": "",
             "button_before": "",
             "button_after": "",
@@ -120,14 +120,7 @@
             "type": "acfe_button",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67eefd5fe9b18",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -135,7 +128,7 @@
             },
             "button_value": "Prev",
             "button_type": "button",
-            "button_class": "prev-button button-hidden mm-button",
+            "button_class": "prev-button mm-button",
             "button_id": "",
             "button_before": "",
             "button_after": "",
@@ -191,7 +184,7 @@
             },
             "button_value": "Next",
             "button_type": "button",
-            "button_class": "next-button button-hidden mm-button",
+            "button_class": "next-button mm-button",
             "button_id": "",
             "button_before": "",
             "button_after": "",
@@ -206,14 +199,7 @@
             "type": "acfe_button",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67eefd72e9b1a",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -221,7 +207,7 @@
             },
             "button_value": "Prev",
             "button_type": "button",
-            "button_class": "prev-button button-hidden mm-button",
+            "button_class": "prev-button mm-button",
             "button_id": "",
             "button_before": "",
             "button_after": "",
@@ -230,7 +216,7 @@
         },
         {
             "key": "field_67eefd8fe9b1c",
-            "label": "How old are you ______?",
+            "label": "Question Four?",
             "name": "question_four",
             "aria-label": "",
             "type": "text",
@@ -272,7 +258,7 @@
             },
             "button_value": "Next",
             "button_type": "button",
-            "button_class": "next-button button-hidden mm-button",
+            "button_class": "next-button mm-button",
             "button_id": "",
             "button_before": "",
             "button_after": "",
@@ -287,14 +273,7 @@
             "type": "acfe_button",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67eefd8fe9b1c",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -302,7 +281,7 @@
             },
             "button_value": "Prev",
             "button_type": "button",
-            "button_class": "prev-button button-hidden mm-button",
+            "button_class": "prev-button mm-button",
             "button_id": "",
             "button_before": "",
             "button_after": "",
@@ -325,7 +304,7 @@
             },
             "button_value": "Prev",
             "button_type": "button",
-            "button_class": "prev-button button-hidden mm-button",
+            "button_class": "prev-button mm-button",
             "button_id": "",
             "button_before": "",
             "button_after": "",
@@ -358,5 +337,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1743801381
+    "modified": 1744070408
 }

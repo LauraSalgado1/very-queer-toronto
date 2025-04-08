@@ -3,6 +3,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
+  cursor: pointer;
   border-radius: 1e3px;
   font-size: 1rem;
   text-align: center;
@@ -13,9 +14,10 @@ input[type="submit"],
   color: $color__background-screen;
   line-height: 1;
   padding: 12px 30px 14px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  //   display: flex;
+  //   width: fit-content;
+  //   justify-content: center;
+  //   align-items: center;
   font-weight: 700;
   letter-spacing: 1px;
   position: relative;
@@ -27,7 +29,7 @@ input[type="submit"],
   &:hover {
     background: $color__link-hover;
     color: $color__background-screen;
-    &::before {
+    &::after {
       opacity: 1;
     }
   }
@@ -36,12 +38,12 @@ input[type="submit"],
   &:focus {
     background: $color__link-hover;
     color: $color__background-screen;
-    &::before {
+    &::after {
       opacity: 1;
     }
   }
 
-  &::before {
+  &::after {
     content: " ";
     position: absolute;
     inset: 10px 10px -10px;
@@ -67,5 +69,20 @@ input[type="submit"],
   &:focus {
     background: $color__background-screen;
     color: $color__link-hover;
+  }
+}
+
+.button-white {
+  background: $color__background-screen;
+  color: $color__background-button;
+  &:hover {
+    background: $color__link-hover;
+    color: $color__background-screen;
+  }
+
+  &:active,
+  &:focus {
+    background: $color__link-hover;
+    color: $color__background-screen;
   }
 }

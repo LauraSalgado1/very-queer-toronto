@@ -32,6 +32,27 @@ get_header();
                     </a>
                 </h2>
 
+                <div class="matchmaking-modal">
+                    <div class="mm-modal-button-wrapper">
+                            <img class="animate__animated animate__bounceInLeft animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent.png" alt="cartoon KT holding a red heart" />
+                            <span>
+                                <span class="mm-intro">
+                                    <span class="speech animate__animated animate__bounceInLeft animate__delay-3s">
+                                        Are you serious about finding a partner?
+                                    </span>
+                                    <span class="yes-container animate__animated animate__fadeIn animate__delay-4s">
+                                        <button class="mm-modal-button" aria-controls="mm-modal" aria-expanded="false">Yes</button>
+                                    </span>
+                                </span>
+
+                                <div id="mmModal" class="mm-modal" aria-hidden="true">
+                                    <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?>  
+                                </div>
+                            </span>
+                    </div>
+            
+                </div>
+
             </div>
             <?php endif; ?>
             <div class="event-column">
@@ -139,6 +160,7 @@ get_header();
             <div class="button-center button-desktop">
                 <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
             </div>
+    
             <?php
             while ( have_posts() ) :
                 the_post();
