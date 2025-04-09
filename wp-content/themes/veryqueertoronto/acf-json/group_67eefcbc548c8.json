@@ -79,7 +79,7 @@
             "choices": {
                 "single": "<span class=\"button\">Single<\/span>",
                 "partnered-but-open": "<span class=\"button\">Partnered but Open<\/span>",
-                "widowed": "<span class=\"button\">Widowed<\/span>",
+                "poly": "<span class=\"button\">Poly<\/span>",
                 "situationship": "<span class=\"button\">In a Situationship<\/span>",
                 "complicated": "<span class=\"button\">It’s… It’s Complicated<\/span>"
             },
@@ -487,5 +487,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1744147538
+    "modified": 1744232556
 }

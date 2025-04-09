@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const submitPrev = document.querySelector(".qSubmit .prev-button");
 
-    const intro = document.querySelector(".mm-intro");
+    // const intro = document.querySelector(".mm-intro");
     const introWrapper = document.querySelector(".mm-modal-button-wrapper");
 
     const mmButtons = document.querySelectorAll(".mm-button");
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modalButton.setAttribute("aria-expanded", "false");
         introWrapper.classList.remove("modal-is-open");
         body.classList.remove("modal-active");
-        modalButton.focus();
+        // modalButton.focus();
       });
     }
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modalButton.setAttribute("aria-expanded", "false");
         introWrapper.classList.remove("modal-is-open");
         body.classList.remove("modal-active");
-        modalButton.focus();
+        // modalButton.focus();
       });
     }
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b1next.addEventListener("click", function () {
         q1.setAttribute("aria-hidden", "true");
         q2.setAttribute("aria-hidden", "false");
-        q2.focus();
+        //q2.focus();
       });
     }
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b2next.addEventListener("click", function () {
         q2.setAttribute("aria-hidden", "true");
         q3.setAttribute("aria-hidden", "false");
-        q3.focus();
+        //q3.focus();
       });
     }
 
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b3next.addEventListener("click", function () {
         q3.setAttribute("aria-hidden", "true");
         q4.setAttribute("aria-hidden", "false");
-        q4.focus();
+        //q4.focus();
       });
     }
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b4next.addEventListener("click", function () {
         q4.setAttribute("aria-hidden", "true");
         q5.setAttribute("aria-hidden", "false");
-        q5.focus();
+        //q5.focus();
       });
     }
 
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b5next.addEventListener("click", function () {
         q5.setAttribute("aria-hidden", "true");
         submitWrapper.setAttribute("aria-hidden", "false");
-        submitWrapper.focus();
+        //submitWrapper.focus();
       });
     }
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b2prev.addEventListener("click", function () {
         q2.setAttribute("aria-hidden", "true");
         q1.setAttribute("aria-hidden", "false");
-        q1.focus();
+        //q1.focus();
       });
     }
 
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b3prev.addEventListener("click", function () {
         q3.setAttribute("aria-hidden", "true");
         q2.setAttribute("aria-hidden", "false");
-        q2.focus();
+        //q2.focus();
       });
     }
 
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b4prev.addEventListener("click", function () {
         q4.setAttribute("aria-hidden", "true");
         q3.setAttribute("aria-hidden", "false");
-        q3.focus();
+        //q3.focus();
       });
     }
 
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       b5prev.addEventListener("click", function () {
         q5.setAttribute("aria-hidden", "true");
         q4.setAttribute("aria-hidden", "false");
-        q4.focus();
+        //q4.focus();
       });
     }
 
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submitPrev.addEventListener("click", function () {
         submitWrapper.setAttribute("aria-hidden", "true");
         q5.setAttribute("aria-hidden", "false");
-        q5.focus();
+        //q5.focus();
       });
     }
   }

@@ -784,6 +784,7 @@ svg {
 	flex-direction: column;
 	background: #494949;
 	position: relative;
+	min-height: calc(100vh - 82px);
 }
 
 .event-column {
@@ -1080,7 +1081,7 @@ form:not(.matchmaking) {
 	background: #fff;
 	padding: 2px 25px 10px;
 	border-radius: 30px;
-	width: 400px;
+	width: 33vw;
 	max-height: calc(100vh - 155px);
 	overflow: auto;
 }
@@ -1106,7 +1107,7 @@ form:not(.matchmaking) {
 
 .matchmaking-modal {
 	position: absolute;
-	top: 20px;
+	top: 60px;
 	left: 20px;
 	z-index: 50;
 }
@@ -1228,7 +1229,7 @@ form:not(.matchmaking) {
 
 .mm-modal .overlay {
 	position: fixed;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.7);
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -1239,17 +1240,22 @@ form:not(.matchmaking) {
 	background: transparent;
 	padding: 0;
 	display: block;
-	margin: 20px 20px 0 auto;
+	margin: 40px 47px 0 auto;
 }
 
 .mm-modal-button-close svg {
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 35px;
+	height: 35px;
+	fill: #c29f51;
 }
 
 .mm-modal-button-close:hover, .mm-modal-button-close:focus, .mm-modal-button-close:active {
 	background: transparent;
+}
+
+.mm-modal-button-close:after {
+	z-index: 0;
 }
 
 .modal-kt {
