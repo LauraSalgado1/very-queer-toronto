@@ -1,9 +1,13 @@
 .site-header {
-  padding: 10px 20px;
+  padding: 0px 20px;
   position: relative;
-  z-index: 0;
+  z-index: 100;
+  height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   @media (min-width: 720px) {
-    padding: 10px 40px;
+    padding: 0px 40px;
   }
   background: #283e40;
   .custom-logo-link {
@@ -42,8 +46,46 @@
       top: -2px;
     }
   }
+  .menu-toggle {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    > svg {
+      fill: $color__link-hover;
+      position: relative;
+      top: 4px;
+    }
+  }
+  .main-navigation {
+    > div {
+      position: absolute;
+      background: #283e40;
+      right: 0;
+      top: 82px;
+      a {
+        color: $color__background-screen;
+        font-size: 1.2rem;
+        font-weight: 900;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          border-bottom: 2px solid $color__link-hover;
+        }
+      }
+    }
+    &.toggled {
+      > div {
+        padding: 40px;
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 12px;
+        }
+      }
+    }
+  }
 }
-
 .site-footer {
   padding: 40px 20px 20px;
   background: #283e40;

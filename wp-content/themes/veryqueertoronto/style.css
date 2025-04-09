@@ -1232,7 +1232,7 @@ form:not(.matchmaking) {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	top: 84px;
+	top: 82px;
 }
 
 .mm-modal-button-close {
@@ -1275,11 +1275,6 @@ form:not(.matchmaking) {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
-.main-navigation {
-	display: block;
-	width: 100%;
-}
-
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -1329,15 +1324,6 @@ form:not(.matchmaking) {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-	}
 }
 
 .site-main .comment-navigation, .site-main
@@ -1498,15 +1484,19 @@ form:not(.matchmaking) {
 }
 
 .site-header {
-	padding: 10px 20px;
+	padding: 0px 20px;
 	position: relative;
-	z-index: 0;
+	z-index: 100;
+	height: 82px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	background: #283e40;
 }
 
 @media (min-width: 720px) {
 	.site-header {
-		padding: 10px 40px;
+		padding: 0px 40px;
 	}
 }
 
@@ -1544,6 +1534,48 @@ form:not(.matchmaking) {
 .site-header .custom-logo-link span {
 	position: relative;
 	top: -2px;
+}
+
+.site-header .menu-toggle {
+	padding: 0;
+	background: transparent;
+	border-radius: 0;
+}
+
+.site-header .menu-toggle > svg {
+	fill: #c29f51;
+	position: relative;
+	top: 4px;
+}
+
+.site-header .main-navigation > div {
+	position: absolute;
+	background: #283e40;
+	right: 0;
+	top: 82px;
+}
+
+.site-header .main-navigation > div a {
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 900;
+	border-bottom: 2px solid transparent;
+}
+
+.site-header .main-navigation > div a:hover {
+	border-bottom: 2px solid #c29f51;
+}
+
+.site-header .main-navigation.toggled > div {
+	padding: 40px;
+}
+
+.site-header .main-navigation.toggled > div ul {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 12px;
 }
 
 .site-footer {
