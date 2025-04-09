@@ -783,10 +783,10 @@ svg {
 	display: flex;
 	flex-direction: column;
 	background: #494949;
+	position: relative;
 }
 
 .event-column {
-	order: -1;
 	background: #45686c;
 }
 
@@ -842,11 +842,8 @@ svg {
 		flex-direction: row;
 		width: 100%;
 	}
-	.three-columns > div {
+	.three-columns > .one-column {
 		width: 33.3%;
-	}
-	.event-column {
-		order: 0;
 	}
 	.event-column section {
 		padding: 0 20px;
@@ -1078,38 +1075,14 @@ form:not(.matchmaking) {
 	display: none;
 }
 
-.matchmaking-container {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.matchmaking-container h2 {
-	text-align: center;
-}
-
-.matchmaking-container .acf-fields {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	min-height: calc(100vh - 79px);
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.matchmaking-container label {
-	font-size: 1.4rem;
-}
-
-.vqt .matchmaking-container .acf-required {
-	color: #494949;
-}
-
 .mm-question {
 	color: #494949;
 	background: #fff;
-	padding: 2px 50px 10px;
-	border-radius: 60px;
+	padding: 2px 25px 10px;
+	border-radius: 30px;
+	width: 400px;
+	max-height: calc(100vh - 155px);
+	overflow: auto;
 }
 
 .mm-question[aria-hidden="true"],
@@ -1135,18 +1108,31 @@ form:not(.matchmaking) {
 	position: absolute;
 	top: 20px;
 	left: 20px;
-	z-index: 5;
-	border-radius: 40px;
-	right: 40px;
+	z-index: 50;
 }
 
-.mm-intro.modal-is-open {
-	transform: translateY(-200%);
+.modal-active {
+	overflow: hidden;
+}
+
+.modal-active .matchmaking-modal {
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.mm-modal-button-wrapper.modal-is-open {
+	transform: translateY(-400%);
 	position: absolute;
 }
 
 .mm-modal[aria-hidden="true"] {
 	display: none;
+}
+
+.b1-wrapper span {
+	padding-bottom: 45px;
+	display: block;
 }
 
 .mm-modal-button-wrapper {
@@ -1158,6 +1144,7 @@ form:not(.matchmaking) {
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
+	width: calc(33vw - 40px);
 }
 
 .mm-modal-button-wrapper span {
@@ -1187,16 +1174,100 @@ form:not(.matchmaking) {
 	color: #494949;
 	background: #fff;
 	padding: 20px;
-	border-radius: 1e3px;
+	border-radius: 30px;
 	display: block;
 	width: fit-content;
 	max-width: 100%;
 }
 
-.mm-modal-button-wrapper .yes-container {
+.mm-question.wide {
+	width: 925px;
+}
+
+.wide .label-text {
+	display: block;
+}
+
+.wide .details {
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+.wide .acf-radio-list {
 	display: flex;
-	margin: 10px 0 0 auto;
-	width: fit-content;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.wide .acf-radio-list li {
+	width: 50%;
+	padding-right: 60px;
+	margin: 0;
+}
+
+.matchmaking label .button {
+	display: inline-flex;
+	margin-bottom: 20px;
+}
+
+.matchmaking label.selected .button {
+	background: #c29f51;
+}
+
+.matchmaking label.selected .button::after {
+	opacity: 1;
+}
+
+.matchmaking ul.acf-radio-list:focus-within,
+.matchmaking ul.acf-checkbox-list:focus-within {
+	border: none;
+	border-radius: 0;
+}
+
+.mm-modal .overlay {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.9);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 84px;
+}
+
+.mm-modal-button-close {
+	background: transparent;
+	padding: 0;
+	display: block;
+	margin: 20px 20px 0 auto;
+}
+
+.mm-modal-button-close svg {
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+
+.mm-modal-button-close:hover, .mm-modal-button-close:focus, .mm-modal-button-close:active {
+	background: transparent;
+}
+
+.modal-kt {
+	width: 200px;
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.image-and-form {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0 auto;
+}
+
+.form-right {
+	width: 200px;
 }
 
 /*--------------------------------------------------------------

@@ -67,7 +67,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		type     : 'loop',
 		drag   : 'free',
 		focus  : 'center',
-		//perPage: 5,
 		pagination: false,
 		autoScroll: {
 			speed: .5,
