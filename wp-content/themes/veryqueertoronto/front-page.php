@@ -17,8 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
         <h1 class="screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
-        <div class="three-columns">
-            <div class="matchmaking-modal">
+                    <div class="matchmaking-modal">
                 <div class="mm-modal-button-wrapper">
                         <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent.png" alt="cartoon KT holding a red heart" />
                         <span>
@@ -47,9 +46,10 @@ get_header();
                         <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?> 
                         <div class="form-right"></div>
                     </div>
-          
                 </div>
             </div>
+        <div class="three-columns">
+
             <?php
             $leftColumn = get_field('left_column');
             

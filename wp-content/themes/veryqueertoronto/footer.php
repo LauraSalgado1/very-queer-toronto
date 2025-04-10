@@ -52,9 +52,6 @@
 
 <script>
 
-// import { Splide } from '@splidejs/splide';
-// import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-
 document.addEventListener( 'DOMContentLoaded', function() {
 
 	let splideExists = document.querySelector('.splide');
@@ -62,7 +59,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	if ( splideExists) {
 		var splide = new Splide( '.splide', {
 		direction: 'ttb',
-		height   : '766px',
+		height   : '743px',
 		autoHeight: true,
 		type     : 'loop',
 		drag   : 'free',

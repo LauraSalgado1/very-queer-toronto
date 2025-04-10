@@ -62,6 +62,10 @@
       background: #283e40;
       right: 0;
       top: 82px;
+      left: 0;
+      @media (min-width: 1100px) {
+        left: auto;
+      }
       a {
         color: $color__background-screen;
         font-size: 1.2rem;
