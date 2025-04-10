@@ -17,37 +17,38 @@ get_header();
 
 	<main id="primary" class="site-main">
         <h1 class="screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
-                    <div class="matchmaking-modal">
-                <div class="mm-modal-button-wrapper">
-                        <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent.png" alt="cartoon KT holding a red heart" />
-                        <span>
-                            <span class="mm-intro">
-                                <span class="speech animate__animated animate__jackInTheBox animate__delay-3s">
-                                    Are you serious about finding a partner?
-                                    <div class="button-wrapper">
-                                        <span></span>
-                                        <div class="animate__animated animate__fadeIn animate__delay-4s">
-                                            <button aria-label="open the modal Matchmaking" class="mm-modal-button" aria-controls="mm-modal" aria-expanded="false">Yes</button>
-                                        </div>
+        <div class="matchmaking-modal">
+            <div class="mm-modal-button-wrapper">
+                    <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
+                    <span>
+                        <span class="mm-intro">
+                            <span class="speech animate__animated animate__jackInTheBox animate__delay-3s">
+                                Are you serious about finding a partner?
+                                <div class="button-wrapper">
+                                    <span></span>
+                                    <div class="animate__animated animate__fadeIn animate__delay-4s">
+                                        <button aria-label="open the modal Matchmaking" class="mm-modal-button" aria-controls="mm-modal" aria-expanded="false">Yes</button>
                                     </div>
-                                </span>
+                                </div>
                             </span>
                         </span>
-                </div>
-                <div id="mmModal" class="mm-modal" aria-hidden="true">
-                    <div id="mmOverlay" class="overlay"></div>
-                    <button class="mm-modal-button-close" aria-controls="mm-modal" aria-label="Close the modal Matchmaking">
-                            <svg width="30" height="30" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="m64.14,50l23.66-23.66c3.91-3.91,3.91-10.24,0-14.14-3.91-3.9-10.24-3.9-14.14,0l-23.66,23.66L26.34,12.19c-3.91-3.91-10.24-3.91-14.14,0-3.9,3.91-3.9,10.24,0,14.14l23.66,23.66-23.66,23.66c-3.91,3.91-3.91,10.24,0,14.14,3.91,3.9,10.24,3.9,14.14,0l23.66-23.66,23.66,23.66c3.91,3.91,10.24,3.91,14.14,0,3.9-3.91,3.9-10.24,0-14.14l-23.66-23.66Z" stroke-width="0"/></svg>
-                            <span class="screen-reader-text">Close the modal Matchmaking</span>
-                    </button>
-                            
-                    <div class="image-and-form">
-                        <img class="modal-kt" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent.png" alt="cartoon KT holding a red heart" /> 
-                        <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?> 
-                        <div class="form-right"></div>
-                    </div>
+                    </span>
+            </div>
+            <div id="mmModal" class="mm-modal" aria-hidden="true">
+                <div id="mmOverlay" class="overlay"></div>
+                <button class="mm-modal-button-close" aria-controls="mm-modal" aria-label="Close the modal Matchmaking">
+                        <svg width="30" height="30" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="m64.14,50l23.66-23.66c3.91-3.91,3.91-10.24,0-14.14-3.91-3.9-10.24-3.9-14.14,0l-23.66,23.66L26.34,12.19c-3.91-3.91-10.24-3.91-14.14,0-3.9,3.91-3.9,10.24,0,14.14l23.66,23.66-23.66,23.66c-3.91,3.91-3.91,10.24,0,14.14,3.91,3.9,10.24,3.9,14.14,0l23.66-23.66,23.66,23.66c3.91,3.91,10.24,3.91,14.14,0,3.9-3.91,3.9-10.24,0-14.14l-23.66-23.66Z" stroke-width="0"/></svg>
+                        <span class="screen-reader-text">Close the modal Matchmaking</span>
+                </button>
+                        
+                <div class="image-and-form">
+                    <img class="kt-mobile" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
+                    <img class="modal-kt kt-desktop" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-large.png" alt="Cartoon KT holding a red heart" width="200" height="202" /> 
+                    <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?> 
+                    <div class="form-right"></div>
                 </div>
             </div>
+        </div>
         <div class="three-columns">
 
             <?php
@@ -56,8 +57,11 @@ get_header();
             if( $leftColumn ): ?>
 
             <div class="one-column bg-image">
-                <img src="<?php echo esc_url($leftColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $leftColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $leftColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $leftColumn['background_image']['height'] ); ?>" >
-   
+                <?php 
+                    $leftBg = $leftColumn['background_image'];
+                    echo wp_get_attachment_image( $leftBg['id'], array('639', '876'), "" );
+                ?>
+
                 <h2>
                     <a href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">
                        <?php echo esc_html( $leftColumn['link']['title'] ); ?>
@@ -71,10 +75,21 @@ get_header();
                     <h2>Community Events</h2>
 
                     <?php
+                        $today = date( 'Ymd' );
                         $eventsquery = new WP_Query( array( 
                             'post_type' => 'event',
                             'post_status' => 'publish',
-                            'posts_per_page' => -1 
+                            'posts_per_page' => -1,
+                            'meta_key'  => 'event_date',
+                            'orderby'   => 'meta_value_num',
+                            'order'     => 'ASC', 
+                            'meta_query' => array(
+                                array(
+                                    'key'     => 'event_date',
+                                    'compare' => '>=',
+                                    'value'   => $today,
+                                ),
+                            ),
                         ) );
                     ?>
 
@@ -154,7 +169,10 @@ get_header();
             if( $rightColumn ): ?>
 
             <div class="bg-image one-column">
-                <img src="<?php echo esc_url($rightColumn['background_image']['url']) ?>" alt="<?php echo esc_attr( $rightColumn['background_image']['alt'] ); ?>" width="<?php echo esc_attr( $rightColumn['background_image']['width'] ); ?>" height="<?php echo esc_attr( $rightColumn['background_image']['height'] ); ?>" >
+                <?php 
+                    $rightBg = $rightColumn['background_image'];
+                    echo wp_get_attachment_image( $rightBg['id'], array('639', '876'), "" );
+                ?>
 
                 <h2>
                     <a href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">

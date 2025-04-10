@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="footer-wrapper">
 			<div class="site-info">
-				<img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/images/VQT PNG 02 V01 copy.png" alt="VQT Community Events" />
+				<img class="footer-logo" src="<?php echo get_template_directory_uri(); ?>/images/VQT-community-events.png" alt="VQT Community Events" width="260" height="136" loading="lazy" />
 			</div>
 			<div>
 				<h3>Connect With Us</h3>	

@@ -483,15 +483,15 @@ form:not(.matchmaking) {
 
 .mm-modal .overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
   //height: calc(100vh - 82px);
-  @media (min-width: 1100px) {
-    background: rgba(0, 0, 0, 0.7);
-  }
+  //   @media (min-width: 1100px) {
+  //     background: rgba(0, 0, 0, 0.7);
+  //   }
 }
 
 .mm-modal-button-close {
@@ -520,12 +520,20 @@ form:not(.matchmaking) {
 }
 
 .modal-kt {
-  width: 120px;
-  display: block;
   position: relative;
   z-index: 10;
-  @media (min-width: 1100px) {
-    width: 200px;
+}
+
+.kt-desktop {
+  display: none;
+  @media (min-width: 1110px) {
+    display: block;
+  }
+}
+
+.kt-mobile {
+  @media (min-width: 1110px) {
+    display: none;
   }
 }
 
