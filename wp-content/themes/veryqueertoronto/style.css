@@ -1071,8 +1071,11 @@ form:not(.matchmaking) {
 }
 
 @media (min-width: 760px) {
+	.page-header {
+		gap: 50px;
+	}
 	.page-header .icon {
-		width: 300px;
+		width: 220px;
 	}
 }
 

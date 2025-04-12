@@ -272,8 +272,9 @@ form:not(.matchmaking) {
     width: 80px;
   }
   @media (min-width: 760px) {
+    gap: 50px;
     .icon {
-      width: 300px;
+      width: 220px;
     }
   }
 }
