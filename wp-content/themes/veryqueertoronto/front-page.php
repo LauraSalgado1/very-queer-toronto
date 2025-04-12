@@ -42,7 +42,7 @@ get_header();
                 </button>
                         
                 <div class="image-and-form">
-                    <img class="kt-mobile" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
+                    <img class="modal-kt kt-mobile" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
                     <img class="modal-kt kt-desktop" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-large.png" alt="Cartoon KT holding a red heart" width="200" height="202" /> 
                     <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?> 
                     <div class="form-right"></div>
@@ -127,6 +127,36 @@ get_header();
                             </ul>
                         </div>
                     </div>
+
+                    <ul class="events-desktop-reduced-motion list-no-style">
+                        <?php
+                        while ( $eventsquery->have_posts() ) :
+                            $eventsquery->the_post();
+                            $vqtEvent = get_field('vqt_event');
+                        ?>
+                        <li class=""> 
+                            <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                                <?php
+                                    if( get_field('vqt_event') ) {
+                                        // Do something.
+                                        echo '<span class="capsule">VQT Event</span>';
+                                    }
+                                ?>
+                                <span class="event-meta">
+                                    <span><?php echo esc_html( get_field('event_date') ); ?></span>
+                                    <span>
+                                        <?php echo esc_html( get_field('event_time') ); ?>
+                                        <?php if( get_field('event_end_time') ): ?>
+                                                - <?php echo esc_html( get_field('event_end_time') ); ?>
+                                        <?php endif; ?>  
+                                    </span>
+                                </span>
+                                <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
+                            </a>
+                        </li>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>    
+                    </ul>
 
                     <ul class="events-mobile list-no-style">
                         <?php

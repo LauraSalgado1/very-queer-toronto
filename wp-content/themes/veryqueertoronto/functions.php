@@ -141,9 +141,14 @@ function veryqueertoronto_scripts() {
 	wp_enqueue_style( 'veryqueertoronto-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'veryqueertoronto-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array());
+	wp_enqueue_style( 'splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
+	
 
 	wp_enqueue_script( 'veryqueertoronto-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'veryqueertoronto-animatedQuestions', get_template_directory_uri() . '/js/animatedQuestions.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'email', get_template_directory_uri() . '/js/email.js', array(), _S_VERSION, array(
+        'strategy' => 'defer'
+    )  );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -179,4 +184,40 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Allow SVG
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+
+  global $wp_version;
+  if ( $wp_version !== '4.7.1' ) {
+     return $data;
+  }
+
+  $filetype = wp_check_filetype( $filename, $mimes );
+
+  return [
+      'ext'             => $filetype['ext'],
+      'type'            => $filetype['type'],
+      'proper_filename' => $data['proper_filename']
+  ];
+
+}, 10, 4 );
+
+function cc_mime_types( $mimes ){
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
+function fix_svg() {
+  echo '<style type="text/css">
+        .attachment-266x266, .thumbnail img {
+             width: 100% !important;
+             height: auto !important;
+        }
+        </style>';
+}
+add_action( 'admin_head', 'fix_svg' );
+
+
 

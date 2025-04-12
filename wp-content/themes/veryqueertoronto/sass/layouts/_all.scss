@@ -1,3 +1,10 @@
+.vqt-email {
+  span:nth-child(1),
+  span:nth-child(2) {
+    display: none;
+  }
+}
+
 img,
 svg {
   max-width: 100%;
@@ -52,13 +59,22 @@ svg {
 }
 
 .desktop-scroll,
-.button-desktop.button-center {
+.button-desktop.button-center,
+.events-desktop-reduced-motion {
   display: none;
 }
 
 @media (min-width: 760px) {
   .desktop-scroll {
     display: block;
+  }
+  @media (prefers-reduced-motion) {
+    .desktop-scroll {
+      display: none;
+    }
+    .events-desktop-reduced-motion {
+      display: block;
+    }
   }
   .button-desktop.button-center {
     display: flex;
@@ -88,7 +104,10 @@ svg {
   width: 900px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
+  @media (min-width: 760px) {
+    padding: 0 40px;
+  }
 }
 
 .page-container {
@@ -488,10 +507,6 @@ form:not(.matchmaking) {
   right: 0;
   bottom: 0;
   top: 0;
-  //height: calc(100vh - 82px);
-  //   @media (min-width: 1100px) {
-  //     background: rgba(0, 0, 0, 0.7);
-  //   }
 }
 
 .mm-modal-button-close {
@@ -560,4 +575,17 @@ form:not(.matchmaking) {
   width: 200px;
   height: 200px;
   flex-shrink: 1;
+}
+
+@media (prefers-reduced-motion) {
+  /* styles to apply if a user's device settings are set to reduced motion */
+  .animate__animated {
+    animation-name: thing !important;
+  }
+}
+
+#checkout-button:hover {
+  &:after {
+    display: none;
+  }
 }
