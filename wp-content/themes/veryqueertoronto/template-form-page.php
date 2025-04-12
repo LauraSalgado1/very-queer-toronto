@@ -29,7 +29,7 @@ get_header();
 					<?php the_title( '<h1>', '</h1>' ); ?>
 				</div>
 				
-				<div>
+				<div class="header-icon">
 					<?php if( $topIcon ) {
 							echo wp_get_attachment_image( $topIcon['ID'], array('300', '300'),"", array( "class" => "icon" ) );
 						}

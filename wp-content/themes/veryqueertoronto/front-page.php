@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-        <h1 class="screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
+        <h1 class="screen-reader-text">VQT Events – Very Queer Toronto Events – Queer events in Toronto</h1>
         <div class="matchmaking-modal">
             <div class="mm-modal-button-wrapper">
                     <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />

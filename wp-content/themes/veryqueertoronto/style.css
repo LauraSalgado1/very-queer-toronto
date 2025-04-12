@@ -1076,6 +1076,10 @@ form:not(.matchmaking) {
 	}
 }
 
+.header-icon {
+	flex-shrink: 0;
+}
+
 .icon {
 	width: 220px;
 	margin: 0 auto;
