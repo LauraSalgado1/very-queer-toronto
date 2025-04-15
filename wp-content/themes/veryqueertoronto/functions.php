@@ -144,8 +144,12 @@ function veryqueertoronto_scripts() {
 	wp_enqueue_style( 'splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
 	
 
-	wp_enqueue_script( 'veryqueertoronto-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'veryqueertoronto-animatedQuestions', get_template_directory_uri() . '/js/animatedQuestions.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'veryqueertoronto-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, array(
+        'strategy' => 'defer'
+    ) );
+	wp_enqueue_script( 'veryqueertoronto-animatedQuestions', get_template_directory_uri() . '/js/animatedQuestions.js', array(), _S_VERSION, array(
+        'strategy' => 'defer'
+    ) );
 	wp_enqueue_script( 'email', get_template_directory_uri() . '/js/email.js', array(), _S_VERSION, array(
         'strategy' => 'defer'
     )  );

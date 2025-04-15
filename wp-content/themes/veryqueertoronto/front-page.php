@@ -19,31 +19,31 @@ get_header();
         <h1 class="screen-reader-text">VQT Events – Very Queer Toronto Events – Queer events in Toronto</h1>
         <div class="matchmaking-modal">
             <div class="mm-modal-button-wrapper">
-                    <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
-                    <span>
-                        <span class="mm-intro">
-                            <span class="speech animate__animated animate__jackInTheBox animate__delay-3s">
-                                Are you serious about finding a partner?
-                                <div class="button-wrapper">
-                                    <span></span>
-                                    <div class="animate__animated animate__fadeIn animate__delay-4s">
-                                        <button aria-label="open the modal Matchmaking" class="mm-modal-button" aria-controls="mm-modal" aria-expanded="false">Yes</button>
-                                    </div>
+                <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" loading="lazy" />
+                <span>
+                    <span class="mm-intro">
+                        <span class="speech animate__animated animate__jackInTheBox animate__delay-3s">
+                            Are you serious about finding a partner?
+                            <div class="button-wrapper">
+                                <span></span>
+                                <div class="animate__animated animate__fadeIn animate__delay-4s">
+                                    <button aria-label="open the modal Matchmaking" class="mm-modal-button" aria-controls="mm-modal" aria-expanded="false">Yes</button>
                                 </div>
-                            </span>
+                            </div>
                         </span>
                     </span>
+                </span>
             </div>
             <div id="mmModal" class="mm-modal" aria-hidden="true">
                 <div id="mmOverlay" class="overlay"></div>
                 <button class="mm-modal-button-close" aria-controls="mm-modal" aria-label="Close the modal Matchmaking">
-                        <svg width="30" height="30" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="m64.14,50l23.66-23.66c3.91-3.91,3.91-10.24,0-14.14-3.91-3.9-10.24-3.9-14.14,0l-23.66,23.66L26.34,12.19c-3.91-3.91-10.24-3.91-14.14,0-3.9,3.91-3.9,10.24,0,14.14l23.66,23.66-23.66,23.66c-3.91,3.91-3.91,10.24,0,14.14,3.91,3.9,10.24,3.9,14.14,0l23.66-23.66,23.66,23.66c3.91,3.91,10.24,3.91,14.14,0,3.9-3.91,3.9-10.24,0-14.14l-23.66-23.66Z" stroke-width="0"/></svg>
-                        <span class="screen-reader-text">Close the modal Matchmaking</span>
+                    <svg width="30" height="30" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="m64.14,50l23.66-23.66c3.91-3.91,3.91-10.24,0-14.14-3.91-3.9-10.24-3.9-14.14,0l-23.66,23.66L26.34,12.19c-3.91-3.91-10.24-3.91-14.14,0-3.9,3.91-3.9,10.24,0,14.14l23.66,23.66-23.66,23.66c-3.91,3.91-3.91,10.24,0,14.14,3.91,3.9,10.24,3.9,14.14,0l23.66-23.66,23.66,23.66c3.91,3.91,10.24,3.91,14.14,0,3.9-3.91,3.9-10.24,0-14.14l-23.66-23.66Z" stroke-width="0"/></svg>
+                    <span class="screen-reader-text">Close the modal Matchmaking</span>
                 </button>
                         
                 <div class="image-and-form">
-                    <img class="modal-kt kt-mobile" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
-                    <img class="modal-kt kt-desktop" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-large.png" alt="Cartoon KT holding a red heart" width="200" height="202" /> 
+                    <img loading="lazy" class="modal-kt kt-mobile" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
+                    <img loading="lazy" class="modal-kt kt-desktop" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-large.png" alt="Cartoon KT holding a red heart" width="200" height="202" /> 
                     <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?> 
                     <div class="form-right"></div>
                 </div>
