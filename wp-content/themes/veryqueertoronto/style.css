@@ -1503,10 +1503,6 @@ form:not(.matchmaking) {
 	display: none;
 }
 
-.mobile-cards {
-	margin-left: 20px;
-}
-
 @media (min-width: 1100px) {
 	.mobile-cards {
 		display: none;
@@ -1514,7 +1510,7 @@ form:not(.matchmaking) {
 }
 
 .mobile-cards .splide__slide {
-	width: 70vw !important;
+	width: 80vw !important;
 }
 
 @media (min-width: 500px) {
@@ -1535,6 +1531,14 @@ form:not(.matchmaking) {
 
 .mobile-cards .splide__track {
 	padding-right: 20px !important;
+	padding-left: 20px !important;
+}
+
+@media (min-width: 970px) {
+	.mobile-cards .splide__track {
+		padding-right: 0px !important;
+		padding-left: 0px !important;
+	}
 }
 
 .mobile-card {
@@ -1571,23 +1575,19 @@ form:not(.matchmaking) {
 	object-fit: cover;
 }
 
-@media (max-width: 1100px) {
-	.testimonials {
-		margin-left: 20px;
-	}
-}
-
 .testimonials-section {
 	padding: 80px 0 160px;
 }
 
 .testimonials-section .wrapper {
 	padding: 0;
+	width: 100%;
 }
 
 @media (min-width: 1100px) {
 	.testimonials-section .wrapper {
 		padding: 0 20px;
+		width: 900px;
 	}
 }
 
@@ -1638,17 +1638,9 @@ form:not(.matchmaking) {
 	.testimonials-section .splide__pagination {
 		bottom: -30px;
 	}
-}
-
-@media (max-width: 1100px) and (min-width: 970px) {
-	.testimonials-section .splide__list {
-		justify-content: center;
-	}
-}
-
-@media (max-width: 1100px) {
 	.testimonials-section .splide__track {
 		padding-right: 20px !important;
+		padding-left: 20px !important;
 	}
 }
 
