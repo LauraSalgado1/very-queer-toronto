@@ -56,7 +56,7 @@ get_header();
             
             if( $leftColumn ): ?>
 
-            <div class="one-column bg-image">
+            <div class="one-column bg-image left-column">
                 <?php 
                     $leftBg = $leftColumn['background_image'];
                     echo wp_get_attachment_image( $leftBg['id'], array('639', '876'), "" );
@@ -198,7 +198,7 @@ get_header();
             
             if( $rightColumn ): ?>
 
-            <div class="bg-image one-column">
+            <div class="bg-image one-column right-column">
                 <?php 
                     $rightBg = $rightColumn['background_image'];
                     echo wp_get_attachment_image( $rightBg['id'], array('639', '876'), "" );
@@ -212,6 +212,35 @@ get_header();
 
             </div>
             <?php endif; ?>
+        </div>
+
+        <div class="mobile-cards">
+            <section>
+            
+                <?php 
+                if( $leftColumn ): ?>
+                    <a class="mobile-card" href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
+                        <?php echo wp_get_attachment_image( $leftBg['id'], array('200', '200'), "" ); ?>
+                        <div class="title-wrapper">
+                            <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
+                        </div>
+                    </a>
+                 <?php endif; ?>
+
+                 <?php 
+                if( $rightColumn ): ?>
+
+                    <a class="mobile-card" href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
+                            
+                        <?php echo wp_get_attachment_image( $rightBg['id'], array('200', '200'), "" );  ?>
+                         <div class="title-wrapper">
+                            <h2><?php  echo esc_html( $rightColumn['link']['title'] ); ?></h2>
+                         </div>
+                      
+                    </a>
+                <?php endif; ?>
+            </section>
+
         </div>
 
         <div class="wrapper">

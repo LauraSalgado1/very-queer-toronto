@@ -8,7 +8,7 @@ h6 {
   font-family: $font__heading;
   font-display: optional;
   font-optical-sizing: auto;
-  font-weight: 900;
+  font-weight: 700;
   font-style: normal;
   font-variation-settings: "wdth" 100;
   line-height: 1.2;
@@ -18,22 +18,20 @@ h6 {
 }
 
 h1 {
-  font-size: 2.4rem;
-  @media (min-width: 760px) {
+  font-size: 2rem;
+  @media (min-width: 1100px) {
     font-size: 4rem;
   }
 }
 
 h2 {
-  font-size: 1.6rem;
-  @media (min-width: 760px) {
+  font-size: 1.8rem;
+  @media (min-width: 1100px) {
     font-size: 2.2rem;
   }
 }
 
 h3 {
-  font-size: 1.3rem;
-  @media (min-width: 760px) {
-    font-size: 1.4rem;
-  }
+  font-size: 1.4rem;
+  font-weight: 900;
 }

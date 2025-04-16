@@ -12,6 +12,13 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+if ( ! defined( 'timeVersion' ) ) {
+	define( 'timeVersion', time() );
+}
+
+
+
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -134,11 +141,12 @@ function veryqueertoronto_widgets_init() {
 }
 add_action( 'widgets_init', 'veryqueertoronto_widgets_init' );
 
+
 /**
  * Enqueue scripts and styles.
  */
 function veryqueertoronto_scripts() {
-	wp_enqueue_style( 'veryqueertoronto-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'veryqueertoronto-style', get_stylesheet_uri(), array(), timeVersion );
 	wp_style_add_data( 'veryqueertoronto-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array());
 	wp_enqueue_style( 'splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
