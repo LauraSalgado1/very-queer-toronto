@@ -220,7 +220,7 @@ get_header();
                     if( $leftColumn ): ?>
                        <li class="splide__slide">
                             <a class="mobile-card " href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
-                                <?php echo wp_get_attachment_image( $leftBg['id'], array('200', '200'), "" ); ?>
+                                <?php echo wp_get_attachment_image( $leftBg['id'], array('300', '300'), "" ); ?>
                                 <div class="title-wrapper">
                                     <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
                                 </div>
@@ -233,7 +233,7 @@ get_header();
                         <li class="splide__slide">
                             <a class="mobile-card" href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
                                     
-                                <?php echo wp_get_attachment_image( $rightBg['id'], array('200', '200'), "" );  ?>
+                                <?php echo wp_get_attachment_image( $rightBg['id'], array('300', '300'), "" );  ?>
                                 <div class="title-wrapper">
                                     <h2><?php  echo esc_html( $rightColumn['link']['title'] ); ?></h2>
                                 </div>
@@ -242,8 +242,8 @@ get_header();
                     <?php endif; ?>
 
                     <li class="splide__slide">
-                        <a class="mobile-card" href="/promote-your-event">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/images/crowd.jpg" alt="Crowd at a concert" width="200" height="200" loading="lazy" />
+                        <a class="mobile-card" href="/submit-an-event">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/images/crowd.jpg" alt="Crowd at a concert" width="300" height="300" loading="lazy" />
                             <div class="title-wrapper">
                                 <h2>Promote Your Event</h2>
                             </div>

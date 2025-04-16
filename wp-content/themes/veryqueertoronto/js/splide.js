@@ -18,31 +18,25 @@ document.addEventListener("DOMContentLoaded", function () {
     splide.mount(window.splide.Extensions);
   }
 
-  const testimonialExists = document.querySelector(".testimonials");
-
-  if (testimonialExists) {
-    const testimonials = new Splide(".testimonials", {
-      type: "loop",
-      rewind: true,
-      gap: "20px",
-      perPage: 1,
-    });
-
-    testimonials.mount(window.splide.Splide);
-  }
-
   const mobileCardsExists = document.querySelector(".mobile-cards");
 
   if (mobileCardsExists) {
     const mobileCards = new Splide(".mobile-cards", {
-      //type: "loop",
-      //rewind: true,
       gap: "20px",
       arrows: false,
-      // perPage: 1.4,
-      //drag: "free",
     });
 
     mobileCards.mount(window.splide.Splide);
+  }
+
+  const testimonialExists = document.querySelector(".testimonials");
+
+  if (testimonialExists) {
+    const testimonials = new Splide(".testimonials", {
+      gap: "20px",
+      //perPage: 1,
+    });
+
+    testimonials.mount(window.splide.Splide);
   }
 });
