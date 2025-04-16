@@ -50,8 +50,8 @@ get_header();
 						<div>
 								<h3><?php echo acf_esc_html( get_sub_field('heading') ); ?></h3>
 								<p><?php  echo acf_esc_html( get_sub_field('paragraph') ); ?></p>
-							</div>
-					<?php endwhile; ?>
+						</div>
+						<?php endwhile; ?>
 					</div>
 			<?php endif; ?>
 

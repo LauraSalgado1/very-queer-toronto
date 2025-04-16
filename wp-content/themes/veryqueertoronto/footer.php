@@ -47,40 +47,6 @@
 
 
 <?php wp_footer(); ?>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> 
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-
-<script>
-
-document.addEventListener( 'DOMContentLoaded', function() {
-
-	let splideExists = document.querySelector('.splide');
-
-	if ( splideExists) {
-		var splide = new Splide( '.splide', {
-		direction: 'ttb',
-		height   : '743px',
-		autoHeight: true,
-		type     : 'loop',
-		drag   : 'free',
-		focus  : 'center',
-		pagination: false,
-		autoScroll: {
-			speed: .5,
-		},
-	} );
-
-	splide.mount(window.splide.Extensions);
-
-	}
-	
-
-
-} );
-
-</script>
-
-
 
 </body>
 </html>

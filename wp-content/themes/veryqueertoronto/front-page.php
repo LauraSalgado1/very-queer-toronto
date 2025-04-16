@@ -94,7 +94,7 @@ get_header();
                     ?>
 
                             
-                    <div class="animate__animated animate__fadeIn animate__delay-2s splide desktop-scroll" aria-label="Community Events">
+                    <div class="animate__animated animate__fadeIn animate__delay-2s splide desktop-scroll">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <?php
@@ -106,7 +106,6 @@ get_header();
                                     <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
                                         <?php
                                             if( get_field('vqt_event') ) {
-                                                // Do something.
                                                 echo '<span class="capsule">VQT Event</span>';
                                             }
                                         ?>
@@ -214,33 +213,44 @@ get_header();
             <?php endif; ?>
         </div>
 
-        <div class="mobile-cards">
-            <section>
-            
-                <?php 
-                if( $leftColumn ): ?>
-                    <a class="mobile-card" href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
-                        <?php echo wp_get_attachment_image( $leftBg['id'], array('200', '200'), "" ); ?>
-                        <div class="title-wrapper">
-                            <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
-                        </div>
-                    </a>
-                 <?php endif; ?>
+        <div class="mobile-cards splide">
+            <div class="splide__track">
+                <ul class="mobile-cards-wrapper splide__list">
+                    <?php 
+                    if( $leftColumn ): ?>
+                       <li class="splide__slide">
+                            <a class="mobile-card " href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
+                                <?php echo wp_get_attachment_image( $leftBg['id'], array('200', '200'), "" ); ?>
+                                <div class="title-wrapper">
+                                    <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
+                                </div>
+                            </a>
+                    </li>
+                    <?php endif; ?>
 
-                 <?php 
-                if( $rightColumn ): ?>
+                    <?php 
+                    if( $rightColumn ): ?>
+                        <li class="splide__slide">
+                            <a class="mobile-card" href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
+                                    
+                                <?php echo wp_get_attachment_image( $rightBg['id'], array('200', '200'), "" );  ?>
+                                <div class="title-wrapper">
+                                    <h2><?php  echo esc_html( $rightColumn['link']['title'] ); ?></h2>
+                                </div>
+                            </a>
+                        </li>
+                    <?php endif; ?>
 
-                    <a class="mobile-card" href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
-                            
-                        <?php echo wp_get_attachment_image( $rightBg['id'], array('200', '200'), "" );  ?>
-                         <div class="title-wrapper">
-                            <h2><?php  echo esc_html( $rightColumn['link']['title'] ); ?></h2>
-                         </div>
-                      
-                    </a>
-                <?php endif; ?>
-            </section>
-
+                    <li class="splide__slide">
+                        <a class="mobile-card" href="/promote-your-event">
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/images/crowd.jpg" alt="Crowd at a concert" width="200" height="200" loading="lazy" />
+                            <div class="title-wrapper">
+                                <h2>Promote Your Event</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="wrapper">
@@ -259,7 +269,34 @@ get_header();
 
         </div>
 
-  
+       
+
+        <?php if( have_rows('testimonials') ): ?>
+            <div class="testimonials-section">
+                <div class="wrapper">
+                    <h2>Testimonials</h2>
+                    <div class="testimonials splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <?php while( have_rows('testimonials') ): the_row(); 
+                                    $testimonialImage = get_sub_field('image');
+                                ?>
+                                <li class="splide__slide testimonial">
+                                    <?php echo wp_get_attachment_image( $testimonialImage['ID'], array('200', '200'), "" ); ?>
+                                    <div>
+                                        <svg aria-hidden="true" focusable="false" fill="#ffffff" class="start" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 30" x="0px" y="0px"><path d="m21.301 4c.411 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.738 4.129-4.308 4.129-3.24 0-4.83-2.547-4.83-5.307 0-5.98 6.834-10.693 8.468-10.693zm-10.833 0c.41 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.739 4.129-4.308 4.129-3.241 0-4.83-2.547-4.83-5.307 0-5.98 6.833-10.693 8.468-10.693z" fill-rule="nonzero"/></svg>
+                                        <p><?php  echo acf_esc_html( get_sub_field('quote') ); ?></p>
+                                        <svg aria-hidden="true" focusable="false"  fill="#ffffff" class="end" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 30" x="0px" y="0px"><path d="m21.301 4c.411 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.738 4.129-4.308 4.129-3.24 0-4.83-2.547-4.83-5.307 0-5.98 6.834-10.693 8.468-10.693zm-10.833 0c.41 0 .699.313.699.663 0 .248-.145.515-.497.702-1.788.948-3.858 4.226-3.858 6.248 3.016-.092 4.326 2.582 4.326 4.258 0 2.007-1.739 4.129-4.308 4.129-3.241 0-4.83-2.547-4.83-5.307 0-5.98 6.833-10.693 8.468-10.693z" fill-rule="nonzero"/></svg>
+                                    </div>
+                                </li>
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
 
 	</main><!-- #main -->
 
