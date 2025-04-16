@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileCards = new Splide(".mobile-cards", {
       gap: "20px",
       arrows: false,
+      flickPower: 100,
     });
 
     mobileCards.mount(window.splide.Splide);
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (testimonialExists) {
     const testimonials = new Splide(".testimonials", {
       gap: "20px",
-      //perPage: 1,
+      flickPower: 100,
     });
 
     testimonials.mount(window.splide.Splide);
