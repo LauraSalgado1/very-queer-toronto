@@ -1357,10 +1357,9 @@ form:not(.matchmaking) {
 
 @media (min-width: 900px) {
 	.mm-question.wide {
-		width: 925px;
+		width: 860px;
 		max-width: 100%;
 		flex-shrink: 1;
-		max-width: 70vw;
 	}
 }
 
@@ -1435,9 +1434,9 @@ form:not(.matchmaking) {
 	margin: 20px 18px 0px auto;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 720px) {
 	.mm-modal-button-close {
-		margin: 30px 47px 10px auto;
+		margin: 20px 28px 0px auto;
 	}
 }
 
@@ -1491,10 +1490,6 @@ form:not(.matchmaking) {
 }
 
 @media (min-width: 760px) {
-	.image-and-form {
-		flex-direction: row;
-		align-items: flex-start;
-	}
 	.image-and-form form {
 		width: inherit;
 	}
