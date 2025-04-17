@@ -5,7 +5,7 @@ input[type="submit"],
 .button {
   cursor: pointer;
   border-radius: 1e3px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-align: center;
   font-family: $font__heading;
   text-decoration: none;
@@ -14,28 +14,14 @@ input[type="submit"],
   color: $color__background-screen;
   line-height: 1;
   padding: 12px 30px 14px;
-  //   display: flex;
-  //   width: fit-content;
-  //   justify-content: center;
-  //   align-items: center;
   font-weight: 700;
   letter-spacing: 1px;
   position: relative;
-
   @media (min-width: 760px) {
     font-size: 1.2rem;
   }
 
   &:hover {
-    background: $color__link-hover;
-    color: $color__background-screen;
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  &:active,
-  &:focus {
     background: $color__link-hover;
     color: $color__background-screen;
     &::after {
@@ -64,12 +50,6 @@ input[type="submit"],
     background: $color__background-screen;
     color: $color__link-hover;
   }
-
-  &:active,
-  &:focus {
-    background: $color__background-screen;
-    color: $color__link-hover;
-  }
 }
 
 .button-white {
@@ -79,10 +59,22 @@ input[type="submit"],
     background: $color__link-hover;
     color: $color__background-screen;
   }
+}
 
-  &:active,
-  &:focus {
-    background: $color__link-hover;
-    color: $color__background-screen;
+.pause {
+  width: 25px;
+  height: 25px;
+  background: $color__link-hover;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  top: -120px;
+  svg {
+    fill: $color__background-screen;
+    width: 15px;
+    height: 10px;
   }
 }

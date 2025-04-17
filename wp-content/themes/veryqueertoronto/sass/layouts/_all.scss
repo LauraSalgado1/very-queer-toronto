@@ -28,22 +28,26 @@ svg {
   flex-direction: column;
   background: $color__background-button;
   position: relative;
-
   @media (min-width: 1100px) {
     min-height: calc(100vh - 82px);
+  }
+  h2 {
+    font-weight: 900;
   }
 }
 
 .event-column {
   padding-top: 30px;
-  background: $color__background-body;
+  background: #39585b;
+  position: relative;
   @media (min-width: 1100px) {
+    background: $color__background-body;
     border-left: 2px solid $color__link-hover;
     border-right: 2px solid $color__link-hover;
   }
 
   section {
-    padding: 0 20px 160px;
+    padding: 0 20px 70px;
     @media (min-width: 1100px) {
       padding: 0 60px;
     }
@@ -152,14 +156,19 @@ form:not(.matchmaking) {
 }
 
 .capsule {
-  background: $color__link-hover;
+  transition: all 0.1s ease;
+  background: $color__text-form;
   color: $color__background-screen;
   display: inline-flex;
-  padding: 4px 8px;
+  padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.9rem;
   margin-bottom: 8px;
   letter-spacing: 0.7px;
+}
+
+.event-card:hover .capsule {
+  background: $color__link-hover;
 }
 
 .event-meta {
@@ -216,7 +225,7 @@ form:not(.matchmaking) {
 }
 
 .left-column {
-  min-height: 260px;
+  min-height: 220px;
   background: $color__background-body;
 }
 
@@ -266,10 +275,10 @@ form:not(.matchmaking) {
   input[type="color"],
   textarea {
     border-radius: 0;
-    border: 1px solid $color__link-hover;
+    border: 2px solid $color__link-hover;
   }
   select {
-    border: 1px solid $color__link-hover;
+    border: 2px solid $color__link-hover;
   }
   .acf-field input[type="text"],
   .acf-field input[type="password"],
@@ -287,12 +296,18 @@ form:not(.matchmaking) {
   .acf-field textarea,
   .acf-field select {
     padding: 8px 16px;
+    min-height: 60px;
+    font-size: 1.2rem;
+    background: rgba(194, 159, 81, 0.06);
   }
   .acf-form-submit {
     padding-left: 12px;
   }
   .acf-required {
     color: $color__background-button;
+  }
+  form {
+    font-size: 1.2rem;
   }
 }
 
@@ -412,7 +427,7 @@ form:not(.matchmaking) {
 
 .matchmaking-modal {
   position: absolute;
-  top: 80px;
+  top: 40px;
   left: 0px;
   z-index: 50;
   @media (min-width: 1100px) {
@@ -662,7 +677,11 @@ form:not(.matchmaking) {
   }
 }
 
-.mobile-cards {
+.mobile-cards-section {
+  padding: 80px 0 90px;
+}
+
+.mobile-cards-section {
   @media (min-width: 1100px) {
     display: none;
   }
@@ -711,7 +730,7 @@ form:not(.matchmaking) {
     text-align: center;
   }
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 900;
   }
 
@@ -722,8 +741,45 @@ form:not(.matchmaking) {
   }
 }
 
+.home {
+  .wp-block-columns {
+    @media (max-width: 782px) {
+      flex-direction: column-reverse;
+      img {
+        width: 262px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  .wp-block-heading {
+    @media (max-width: 782px) {
+      text-align: center;
+    }
+  }
+  .blocks {
+    @media (max-width: 1100px) {
+      background: #39585b;
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.vqt .splide__arrow {
+  background: $color__link-hover;
+  opacity: 1;
+  width: 25px;
+  height: 25px;
+  svg {
+    fill: #fff;
+    width: 19px;
+    height: 16px;
+  }
+}
+
 .testimonials-section {
-  padding: 80px 0 160px;
+  padding: 50px 0 120px;
   .wrapper {
     padding: 0;
     width: 100%;
@@ -744,18 +800,17 @@ form:not(.matchmaking) {
   .splide__arrow--next {
     display: none;
     @media (min-width: 1100px) {
-      top: auto;
-      right: 40%;
-      bottom: -71px;
+      top: -50px;
       display: flex;
+      right: auto;
+      left: 310px;
     }
   }
   .splide__arrow--prev {
     display: none;
     @media (min-width: 1100px) {
-      top: auto;
-      left: 40%;
-      bottom: -71px;
+      left: 250px;
+      top: -50px;
       display: flex;
     }
   }
@@ -793,6 +848,10 @@ form:not(.matchmaking) {
     @media (min-width: 1100px) {
       flex-direction: row;
       gap: 60px;
+      > div {
+        width: 400px;
+        max-width: 100%;
+      }
     }
   }
 
@@ -824,21 +883,6 @@ form:not(.matchmaking) {
   p {
     margin: 0;
     font-style: italic;
-  }
-}
-
-.home {
-  .wp-block-columns {
-    @media (max-width: 782px) {
-      flex-direction: column-reverse;
-      img {
-        width: 262px;
-        margin: 0 auto;
-        display: block;
-      }
-    }
-  }
-  .wp-block-heading {
-    text-align: center;
+    font-size: 1rem;
   }
 }

@@ -93,8 +93,23 @@ get_header();
                         ) );
                     ?>
 
-                            
                     <div class="animate__animated animate__fadeIn animate__delay-2s splide desktop-scroll">
+                        <button class="splide__toggle pause" type="button">
+                            <svg
+                                class="splide__toggle__pause"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="m2 1v22h7v-22zm13 0v22h7v-22z"/>
+                            </svg>
+                            <svg
+                            class="splide__toggle__play"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path d="m22 12-20 11v-22l10 5.5z"/>
+                        </svg>
+                        </button>
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <?php
@@ -137,7 +152,6 @@ get_header();
                             <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
                                 <?php
                                     if( get_field('vqt_event') ) {
-                                        // Do something.
                                         echo '<span class="capsule">VQT Event</span>';
                                     }
                                 ?>
@@ -167,7 +181,6 @@ get_header();
                             <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
                                 <?php
                                     if( get_field('vqt_event') ) {
-                                        // Do something.
                                         echo '<span class="capsule">VQT Event</span>';
                                     }
                                 ?>
@@ -213,47 +226,49 @@ get_header();
             <?php endif; ?>
         </div>
 
-        <div class="mobile-cards splide">
-            <div class="splide__track">
-                <ul class="mobile-cards-wrapper splide__list">
-                    <?php 
-                    if( $leftColumn ): ?>
-                       <li class="splide__slide">
-                            <a class="mobile-card " href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
-                                <?php echo wp_get_attachment_image( $leftBg['id'], array('300', '300'), "" ); ?>
-                                <div class="title-wrapper">
-                                    <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
-                                </div>
-                            </a>
-                    </li>
-                    <?php endif; ?>
-
-                    <?php 
-                    if( $rightColumn ): ?>
+        <div class="mobile-cards-section">
+            <div class="mobile-cards splide">
+                <div class="splide__track">
+                    <ul class="mobile-cards-wrapper splide__list">
+                        <?php 
+                        if( $leftColumn ): ?>
                         <li class="splide__slide">
-                            <a class="mobile-card" href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
-                                    
-                                <?php echo wp_get_attachment_image( $rightBg['id'], array('300', '300'), "" );  ?>
+                                <a class="mobile-card " href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
+                                    <?php echo wp_get_attachment_image( $leftBg['id'], array('300', '300'), "" ); ?>
+                                    <div class="title-wrapper">
+                                        <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
+                                    </div>
+                                </a>
+                        </li>
+                        <?php endif; ?>
+
+                        <?php 
+                        if( $rightColumn ): ?>
+                            <li class="splide__slide">
+                                <a class="mobile-card" href="<?php echo esc_url( $rightColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $rightColumn['link']['target'] ); ?>">
+                                        
+                                    <?php echo wp_get_attachment_image( $rightBg['id'], array('300', '300'), "" );  ?>
+                                    <div class="title-wrapper">
+                                        <h2><?php  echo esc_html( $rightColumn['link']['title'] ); ?></h2>
+                                    </div>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
+                        <li class="splide__slide">
+                            <a class="mobile-card" href="/submit-an-event">
+                                <img class="" src="<?php echo get_template_directory_uri(); ?>/images/crowd.jpg" alt="Crowd at a concert" width="300" height="300" loading="lazy" />
                                 <div class="title-wrapper">
-                                    <h2><?php  echo esc_html( $rightColumn['link']['title'] ); ?></h2>
+                                    <h2>Promote Your Event</h2>
                                 </div>
                             </a>
                         </li>
-                    <?php endif; ?>
-
-                    <li class="splide__slide">
-                        <a class="mobile-card" href="/submit-an-event">
-                            <img class="" src="<?php echo get_template_directory_uri(); ?>/images/crowd.jpg" alt="Crowd at a concert" width="300" height="300" loading="lazy" />
-                            <div class="title-wrapper">
-                                <h2>Promote Your Event</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="wrapper">
+        <div class="wrapper blocks">
             <div class="button-center button-desktop">
                 <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
             </div>

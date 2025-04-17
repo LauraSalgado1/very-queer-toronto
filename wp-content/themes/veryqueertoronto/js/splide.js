@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pagination: false,
       autoScroll: {
         speed: 0.4,
+        useToggleButton: true,
       },
     });
 
