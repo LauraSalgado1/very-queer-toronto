@@ -426,7 +426,7 @@ h1 {
 	font-size: 2rem;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	h1 {
 		font-size: 4rem;
 	}
@@ -436,7 +436,7 @@ h2 {
 	font-size: 1.8rem;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	h2 {
 		font-size: 2.2rem;
 	}
@@ -775,7 +775,7 @@ svg {
 	position: relative;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.three-columns {
 		min-height: calc(100vh - 82px);
 	}
@@ -791,8 +791,9 @@ svg {
 	position: relative;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.event-column {
+		min-width: 380px;
 		background: #45686c;
 		border-left: 2px solid #c29f51;
 		border-right: 2px solid #c29f51;
@@ -803,7 +804,7 @@ svg {
 	padding: 0 20px 70px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.event-column section {
 		padding: 0 60px;
 	}
@@ -827,13 +828,13 @@ svg {
 	display: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.desktop-scroll {
 		display: block;
 	}
 }
 
-@media (min-width: 1100px) and (prefers-reduced-motion) {
+@media (min-width: 900px) and (prefers-reduced-motion) {
 	.desktop-scroll {
 		display: none;
 	}
@@ -842,7 +843,7 @@ svg {
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.button-desktop.button-center {
 		display: flex;
 	}
@@ -857,7 +858,7 @@ svg {
 	margin: 0 auto;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.three-columns {
 		flex-direction: row;
 		width: 100%;
@@ -877,7 +878,7 @@ svg {
 	padding: 0 20px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.wrapper {
 		padding: 0 40px;
 	}
@@ -888,7 +889,7 @@ svg {
 	padding-bottom: 160px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.page-container {
 		padding-top: 60px;
 	}
@@ -951,7 +952,7 @@ form:not(.matchmaking) {
 	z-index: 1;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.bg-image {
 		padding: 40px 80px;
 	}
@@ -1001,7 +1002,7 @@ form:not(.matchmaking) {
 	background: #45686c;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
 	.left-column.bg-image:after {
 		display: none;
 	}
@@ -1017,7 +1018,7 @@ form:not(.matchmaking) {
 	display: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.right-column {
 		display: flex;
 	}
@@ -1096,7 +1097,7 @@ form:not(.matchmaking) {
 	width: 120px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 760px) {
 	.page-header {
 		display: flex;
 		justify-content: flex-start;
@@ -1118,7 +1119,7 @@ form:not(.matchmaking) {
 	display: block;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 760px) {
 	.icon {
 		width: 300px;
 	}
@@ -1128,7 +1129,7 @@ form:not(.matchmaking) {
 	margin-bottom: 80px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 760px) {
 	.options {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -1139,7 +1140,7 @@ form:not(.matchmaking) {
 	padding: 30px 0 0 0;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 760px) {
 	.options > div {
 		padding: 60px 60px 0 0;
 	}
@@ -1148,14 +1149,14 @@ form:not(.matchmaking) {
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 760px) {
 	.form-row {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 760px) {
 	.half-info {
 		padding-right: 60px;
 	}
@@ -1186,7 +1187,7 @@ form:not(.matchmaking) {
 	animation-name: bounceInLeft;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.mm-question {
 		width: 33vw;
 		max-height: calc(100vh - 157px);
@@ -1222,14 +1223,14 @@ form:not(.matchmaking) {
 	z-index: 50;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.matchmaking-modal {
 		left: 20px;
 		top: 60px;
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.modal-active {
 		overflow: hidden;
 	}
@@ -1263,13 +1264,22 @@ form:not(.matchmaking) {
 	position: relative;
 	z-index: 6;
 	display: flex;
+	flex-direction: row;
 	align-items: flex-start;
 	justify-content: flex-start;
 	width: calc(100% - 20px);
 }
 
+@media (min-width: 900px) {
+	.mm-modal-button-wrapper {
+		width: 200px;
+		flex-direction: column;
+	}
+}
+
 @media (min-width: 1100px) {
 	.mm-modal-button-wrapper {
+		flex-direction: row;
 		width: calc(33vw - 40px);
 	}
 }
@@ -1305,7 +1315,7 @@ form:not(.matchmaking) {
 	animation-name: thingy;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.mm-modal-button-wrapper > img.animate__zoomInUp {
 		animation-name: zoomInUp;
 	}
@@ -1329,7 +1339,7 @@ form:not(.matchmaking) {
 	animation-delay: 0s;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.mm-modal-button-wrapper .speech.animate__animated.animate__delay-3s {
 		animation-delay: 3s;
 	}
@@ -1339,13 +1349,13 @@ form:not(.matchmaking) {
 	animation-delay: 1s;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.mm-modal-button-wrapper .speech .animate__animated.animate__delay-4s {
 		animation-delay: 4s;
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.mm-question.wide {
 		width: 925px;
 		max-width: 100%;
@@ -1365,7 +1375,7 @@ form:not(.matchmaking) {
 	line-height: 1.3;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.wide .details {
 		font-size: 1.2rem;
 	}
@@ -1375,7 +1385,7 @@ form:not(.matchmaking) {
 	margin: 0 0 50px 0;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.wide .acf-radio-list {
 		display: flex;
 		justify-content: flex-start;
@@ -1391,6 +1401,8 @@ form:not(.matchmaking) {
 .matchmaking label .button {
 	display: inline-flex;
 	margin-bottom: 20px;
+	max-width: 90%;
+	font-size: 0.9rem;
 }
 
 .matchmaking label.selected .button {
@@ -1423,7 +1435,7 @@ form:not(.matchmaking) {
 	margin: 20px 18px 0px auto;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.mm-modal-button-close {
 		margin: 30px 47px 10px auto;
 	}
@@ -1453,13 +1465,13 @@ form:not(.matchmaking) {
 	display: none;
 }
 
-@media (min-width: 1110px) {
+@media (min-width: 900px) {
 	.kt-desktop {
 		display: block;
 	}
 }
 
-@media (min-width: 1110px) {
+@media (min-width: 900px) {
 	.kt-mobile {
 		display: none;
 	}
@@ -1478,7 +1490,7 @@ form:not(.matchmaking) {
 	width: 100%;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 760px) {
 	.image-and-form {
 		flex-direction: row;
 		align-items: flex-start;
@@ -1486,6 +1498,14 @@ form:not(.matchmaking) {
 	.image-and-form form {
 		width: inherit;
 	}
+}
+
+.qSubmit .button-wrapper {
+	margin-top: 40px;
+}
+
+.page-form input[type="submit"] {
+	font-size: 1rem;
 }
 
 .form-right {
@@ -1509,7 +1529,7 @@ form:not(.matchmaking) {
 	padding: 80px 0 90px;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.mobile-cards-section {
 		display: none;
 	}
@@ -1529,7 +1549,7 @@ form:not(.matchmaking) {
 	bottom: -30px;
 }
 
-@media (min-width: 970px) {
+@media (min-width: 900px) {
 	.mobile-cards-section .splide__list {
 		justify-content: center;
 	}
@@ -1540,7 +1560,7 @@ form:not(.matchmaking) {
 	padding-left: 20px !important;
 }
 
-@media (min-width: 970px) {
+@media (min-width: 900px) {
 	.mobile-cards-section .splide__track {
 		padding-right: 0px !important;
 		padding-left: 0px !important;
@@ -1598,11 +1618,11 @@ form:not(.matchmaking) {
 	}
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
 	.home .blocks {
 		background: #39585b;
-		padding-top: 50px;
-		padding-bottom: 30px;
+		padding-top: 30px;
+		padding-bottom: 10px;
 	}
 }
 
@@ -1620,7 +1640,7 @@ form:not(.matchmaking) {
 }
 
 .testimonials-section {
-	padding: 50px 0 120px;
+	padding: 40px 0 120px;
 }
 
 .testimonials-section .wrapper {
@@ -1628,7 +1648,7 @@ form:not(.matchmaking) {
 	width: 100%;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.testimonials-section .wrapper {
 		padding: 0 20px;
 		width: 900px;
@@ -1639,7 +1659,7 @@ form:not(.matchmaking) {
 	text-align: center;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.testimonials-section h2 {
 		text-align: left;
 	}
@@ -1653,7 +1673,7 @@ form:not(.matchmaking) {
 	display: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.testimonials-section .splide__arrow--next {
 		top: -50px;
 		display: flex;
@@ -1666,7 +1686,7 @@ form:not(.matchmaking) {
 	display: none;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.testimonials-section .splide__arrow--prev {
 		left: 250px;
 		top: -50px;
@@ -1674,9 +1694,10 @@ form:not(.matchmaking) {
 	}
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
 	.testimonials-section .splide__slide {
 		width: 80vw !important;
+		max-width: 400px;
 	}
 	.testimonials-section .splide__pagination {
 		bottom: -30px;
@@ -1696,7 +1717,7 @@ form:not(.matchmaking) {
 	height: 100%;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
 	.testimonial .testimonial-wrapper {
 		background: #fff;
 		padding: 20px;
@@ -1708,7 +1729,7 @@ form:not(.matchmaking) {
 	}
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.testimonial .testimonial-wrapper {
 		flex-direction: row;
 		gap: 60px;
@@ -1736,7 +1757,7 @@ form:not(.matchmaking) {
 	position: relative;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.testimonial .start {
 		right: 30px;
 	}
@@ -2058,7 +2079,7 @@ form:not(.matchmaking) {
 	line-height: 1.2;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.site-header .main-navigation > div a {
 		font-size: 2.2rem;
 	}
@@ -2084,7 +2105,7 @@ form:not(.matchmaking) {
 	min-height: calc(100vh - 82px);
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 900px) {
 	.site-header .main-navigation.toggled > div {
 		padding: 60px 60px;
 		min-height: auto;

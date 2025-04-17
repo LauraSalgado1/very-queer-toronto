@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalButton = document.querySelector(".mm-modal-button");
     const modalButtonClose = document.querySelector(".mm-modal-button-close");
 
+    const form = document.querySelector(".mm-modal form");
+
     const mmModal = document.getElementById("mmModal");
     const overlay = document.getElementById("mmOverlay");
     const body = document.body;
@@ -55,6 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
         modalButton.setAttribute("aria-expanded", "false");
         introWrapper.classList.remove("modal-is-open");
         body.classList.remove("modal-active");
+        const selectedLabels = document.querySelectorAll(
+          ".mm-modal label.selected"
+        );
+        selectedLabels.forEach((label) => {
+          label.classList.remove("selected");
+        });
+        const openQuestion = document.querySelector(
+          '.mm-question[aria-hidden="false"]'
+        );
+        openQuestion.setAttribute("aria-hidden", "true");
+        q1.setAttribute("aria-hidden", "false");
+        form.reset();
       });
     }
 
@@ -64,6 +78,18 @@ document.addEventListener("DOMContentLoaded", function () {
         modalButton.setAttribute("aria-expanded", "false");
         introWrapper.classList.remove("modal-is-open");
         body.classList.remove("modal-active");
+        const selectedLabels = document.querySelectorAll(
+          ".mm-modal label.selected"
+        );
+        selectedLabels.forEach((label) => {
+          label.classList.remove("selected");
+        });
+        const openQuestion = document.querySelector(
+          '.mm-question[aria-hidden="false"]'
+        );
+        openQuestion.setAttribute("aria-hidden", "true");
+        q1.setAttribute("aria-hidden", "false");
+        form.reset();
       });
     }
 
