@@ -41,10 +41,12 @@
 			</a>
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" aria-hidden="true" focusable="false" width="50" height="50">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="open and close the main nav">
+					<span class="screen-reader-text">open and close the main nav</span>
+					<svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0" aria-hidden="true" focusable="false" width="50" height="50">
 						<path d="m87.5 75c0 3.4531-2.7969 6.25-6.25 6.25h-62.5c-3.4531 0-6.25-2.7969-6.25-6.25s2.7969-6.25 6.25-6.25h62.5c3.4531 0 6.25 2.7969 6.25 6.25zm-6.25-31.25h-62.5c-3.4531 0-6.25 2.7969-6.25 6.25s2.7969 6.25 6.25 6.25h62.5c3.4531 0 6.25-2.7969 6.25-6.25s-2.7969-6.25-6.25-6.25zm-62.5-12.5h62.5c3.4531 0 6.25-2.7969 6.25-6.25s-2.7969-6.25-6.25-6.25h-62.5c-3.4531 0-6.25 2.7969-6.25 6.25s2.7969 6.25 6.25 6.25z"/>
-						</svg>
+					</svg>
+					<svg class="icon-x" width="40" height="40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" x="0px" y="0px"><path d="m64.14,50l23.66-23.66c3.91-3.91,3.91-10.24,0-14.14-3.91-3.9-10.24-3.9-14.14,0l-23.66,23.66L26.34,12.19c-3.91-3.91-10.24-3.91-14.14,0-3.9,3.91-3.9,10.24,0,14.14l23.66,23.66-23.66,23.66c-3.91,3.91-3.91,10.24,0,14.14,3.91,3.9,10.24,3.9,14.14,0l23.66-23.66,23.66,23.66c3.91,3.91,10.24,3.91,14.14,0,3.9-3.91,3.9-10.24,0-14.14l-23.66-23.66Z" stroke-width="0"/></svg>
 					<span class="screen-reader-text"><?php  esc_html_e( 'Primary Menu', 'veryqueertoronto' ); ?></span>
 				</button>
 				<?php

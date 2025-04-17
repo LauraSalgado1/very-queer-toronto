@@ -1420,7 +1420,7 @@ form:not(.matchmaking) {
 	background: transparent;
 	padding: 0;
 	display: block;
-	margin: 20px 28px 0px auto;
+	margin: 20px 18px 0px auto;
 }
 
 @media (min-width: 1100px) {
@@ -1658,7 +1658,7 @@ form:not(.matchmaking) {
 		top: -50px;
 		display: flex;
 		right: auto;
-		left: 310px;
+		left: 295px;
 	}
 }
 
@@ -2025,16 +2025,21 @@ form:not(.matchmaking) {
 	top: -2px;
 }
 
-.site-header .menu-toggle {
+.site-header .main-navigation .menu-toggle {
 	padding: 0;
 	background: transparent;
 	border-radius: 0;
 }
 
-.site-header .menu-toggle > svg {
+.site-header .main-navigation .menu-toggle svg {
 	fill: #c29f51;
 	position: relative;
 	top: 4px;
+}
+
+.site-header .main-navigation .menu-toggle .icon-x {
+	display: none;
+	right: 3px;
 }
 
 .site-header .main-navigation > div {
@@ -2042,33 +2047,47 @@ form:not(.matchmaking) {
 	background: #283e40;
 	right: 0;
 	top: 82px;
-	left: 0;
-}
-
-@media (min-width: 1100px) {
-	.site-header .main-navigation > div {
-		left: auto;
-	}
+	width: 100vw;
 }
 
 .site-header .main-navigation > div a {
 	color: #fff;
-	font-size: 1.4rem;
-	font-weight: 900;
+	font-size: 1.8rem;
 	border-bottom: 2px solid transparent;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+@media (min-width: 1100px) {
+	.site-header .main-navigation > div a {
+		font-size: 2.2rem;
+	}
 }
 
 .site-header .main-navigation > div a:hover {
 	border-bottom: 2px solid #c29f51;
 }
 
+.site-header .main-navigation.toggled .menu-toggle .icon-hamburger {
+	position: relative;
+	top: 4px;
+	display: none;
+}
+
+.site-header .main-navigation.toggled .menu-toggle .icon-x {
+	display: none;
+	display: block;
+}
+
 .site-header .main-navigation.toggled > div {
 	padding: 40px 20px;
+	min-height: calc(100vh - 82px);
 }
 
 @media (min-width: 1100px) {
 	.site-header .main-navigation.toggled > div {
-		padding: 40px;
+		padding: 60px 60px;
+		min-height: auto;
 	}
 }
 
@@ -2078,6 +2097,15 @@ form:not(.matchmaking) {
 	align-items: flex-start;
 	justify-content: flex-start;
 	gap: 30px;
+	width: 330px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+@media (min-width: 1100px) {
+	.site-header .main-navigation.toggled > div ul {
+		width: 444px;
+	}
 }
 
 .site-footer {

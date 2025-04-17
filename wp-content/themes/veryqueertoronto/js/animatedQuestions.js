@@ -76,6 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b1next.blur();
         q1.setAttribute("aria-hidden", "true");
         q2.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -84,6 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b2next.blur();
         q2.setAttribute("aria-hidden", "true");
         q3.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -92,6 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b3next.blur();
         q3.setAttribute("aria-hidden", "true");
         q4.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -100,6 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b4next.blur();
         q4.setAttribute("aria-hidden", "true");
         q5.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -108,6 +124,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b5next.blur();
         q5.setAttribute("aria-hidden", "true");
         submitWrapper.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -116,6 +136,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b2prev.blur();
         q2.setAttribute("aria-hidden", "true");
         q1.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -124,6 +148,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b3prev.blur();
         q3.setAttribute("aria-hidden", "true");
         q2.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -132,6 +160,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b4prev.blur();
         q4.setAttribute("aria-hidden", "true");
         q3.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -140,6 +172,10 @@ document.addEventListener("DOMContentLoaded", function () {
         b5prev.blur();
         q5.setAttribute("aria-hidden", "true");
         q4.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
 
@@ -148,6 +184,10 @@ document.addEventListener("DOMContentLoaded", function () {
         submitPrev.blur();
         submitWrapper.setAttribute("aria-hidden", "true");
         q5.setAttribute("aria-hidden", "false");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     }
   }
