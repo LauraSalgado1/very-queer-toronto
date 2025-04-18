@@ -1613,11 +1613,16 @@ form:not(.matchmaking) {
 	}
 }
 
-@media (max-width: 900px) {
+.home .blocks {
+	background: #39585b;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+@media (min-width: 900px) {
 	.home .blocks {
-		background: #39585b;
-		padding-top: 30px;
-		padding-bottom: 10px;
+		padding-top: 60px;
+		background: transparent;
 	}
 }
 
@@ -1772,6 +1777,10 @@ form:not(.matchmaking) {
 	margin: 0;
 	font-style: italic;
 	font-size: 1rem;
+}
+
+.wp-singular .wrapper a {
+	color: #fff;
 }
 
 /*--------------------------------------------------------------

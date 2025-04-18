@@ -773,10 +773,12 @@ form:not(.matchmaking) {
     }
   }
   .blocks {
-    @media (max-width: 900px) {
-      background: #39585b;
-      padding-top: 30px;
-      padding-bottom: 10px;
+    background: #39585b;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    @media (min-width: 900px) {
+      padding-top: 60px;
+      background: transparent;
     }
   }
 }
@@ -901,4 +903,9 @@ form:not(.matchmaking) {
     font-style: italic;
     font-size: 1rem;
   }
+}
+
+//inline links on a default page template
+.wp-singular .wrapper a {
+  color: #fff;
 }

@@ -268,11 +268,11 @@ get_header();
             </div>
         </div>
 
+        <div class="button-center button-desktop">
+            <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
+        </div>
+
         <div class="wrapper blocks">
-            <div class="button-center button-desktop">
-                <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
-            </div>
-    
             <?php
             while ( have_posts() ) :
                 the_post();
