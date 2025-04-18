@@ -24,6 +24,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<div class="page-form page-container wrapper">
+			<?php if( function_exists( 'aioseo_breadcrumbs' ) ) aioseo_breadcrumbs(); ?>
 			<div class="page-header">
 				<div>
 					<?php the_title( '<h1>', '</h1>' ); ?>

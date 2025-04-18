@@ -2,7 +2,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.button {
+.button,
+.aioseo-breadcrumb a {
   cursor: pointer;
   border-radius: 1e3px;
   font-size: 1.4rem;
@@ -76,5 +77,18 @@ input[type="submit"],
     fill: $color__background-screen;
     width: 15px;
     height: 10px;
+  }
+}
+
+.aioseo-breadcrumb a {
+  background: $color__background-button;
+  font-size: 0.9rem;
+  padding: 8px 15px 10px;
+
+  &:hover {
+    background: $color__link-hover;
+  }
+  a {
+    text-decoration: none;
   }
 }

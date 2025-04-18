@@ -11,6 +11,7 @@
 
 <div class="page-container wrapper">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if( function_exists( 'aioseo_breadcrumbs' ) ) aioseo_breadcrumbs(); ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
