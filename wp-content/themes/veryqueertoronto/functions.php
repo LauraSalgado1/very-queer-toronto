@@ -149,6 +149,8 @@ function veryqueertoronto_scripts() {
 	wp_enqueue_style( 'veryqueertoronto-style', get_stylesheet_uri(), array(), timeVersion );
 	wp_style_add_data( 'veryqueertoronto-style', 'rtl', 'replace' );
 
+	wp_enqueue_script( 'splide', get_template_directory_uri() . '/js/splide.js', array(), timeVersion, array('strategy' => 'defer') );
+	wp_enqueue_script( 'splideExtension', get_template_directory_uri() . '/js/splideExtension.js', array(), timeVersion, array('strategy' => 'defer') );
 	wp_enqueue_script( 'veryqueertoronto-scripts', get_template_directory_uri() . '/js/scripts.js', array(), timeVersion, array('strategy' => 'defer') );
 	
 
