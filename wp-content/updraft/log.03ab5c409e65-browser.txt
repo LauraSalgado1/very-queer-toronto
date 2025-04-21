@@ -1,9 +1,0 @@
-0000.009 (R) [notice] Looking for uploads archive: file name: backup_2025-04-18-2004_VQT_Events_8aa67e16f829-uploads.zip
-0000.009 (R) [notice] Archive is expected to be size: 14969.4 KB: OK
-0000.011 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
-0000.013 (R) [notice] Unpacking backup... (backup_2025-04-18-2004_VQT_Events_8aa67e16f829-uploads.zip, 14.6 MB)
-0000.355 (R) [notice] Unzip progress: 182 out of 182 files (14.9 MB, uploads/0f5eff356e9c97ff690c9e74a72f46e1-wpsp-rate-limiting.log)
-0000.377 (R) [notice] Moving old data out of the way...
-0000.524 (R) [notice] Moving unpacked backup into place...
-0000.660 (R) [notice] Cleaning up rubbish...
-0000.687 (R) [notice] Restore successful!

@@ -150,6 +150,8 @@ function veryqueertoronto_scripts() {
 	wp_style_add_data( 'veryqueertoronto-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array());
 	wp_enqueue_style( 'splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
+
+
 	
 
 	wp_enqueue_script( 'veryqueertoronto-navigation', get_template_directory_uri() . '/js/navigation.js', array(), timeVersion, array(

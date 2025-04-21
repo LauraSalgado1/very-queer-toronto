@@ -47,7 +47,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Accessibility
 	- Alignments
 
+	
 --------------------------------------------------------------*/
+@font-face {
+	font-family: "Open-Sans-Local";
+	src: url("fonts/OpenSans-VariableFont_wdth,wght.eot?#iefix") format("eot");
+	src: url("fonts/OpenSans-VariableFont_wdth,wght.eot") format("eot"), url("fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2"), url("fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff"), url("fonts/OpenSans-VariableFont_wdth,wght.otf") format("otf"), url("fonts/OpenSans-VariableFont_wdth,wght.ttf") format("ttf");
+	font-weight: -500;
+	font-style: normal;
+}
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -388,7 +397,7 @@ select,
 optgroup,
 textarea {
 	color: #fff;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Open-Sans-Local", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 	font-optical-sizing: auto;
@@ -404,9 +413,6 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: "Open Sans", sans-serif;
-	font-display: optional;
-	font-optical-sizing: auto;
 	font-weight: 700;
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
@@ -602,7 +608,7 @@ input[type="submit"],
 	border-radius: 1e3px;
 	font-size: 1.4rem;
 	text-align: center;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Open-Sans-Local", sans-serif;
 	text-decoration: none;
 	border: none;
 	background: #494949;
@@ -2251,17 +2257,6 @@ form:not(.matchmaking) {
 --------------------------------------------------------------*/
 /* Jetpack infinite scroll
 --------------------------------------------- */
-/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	display: none;
-}
-
-/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/

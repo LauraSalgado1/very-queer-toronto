@@ -1,6 +1,19 @@
+@font-face {
+  font-family: "Open-Sans-Local";
+  src: url("fonts/OpenSans-VariableFont_wdth,wght.eot?#iefix") format("eot");
+  src:
+    url("fonts/OpenSans-VariableFont_wdth,wght.eot") format("eot"),
+    url("fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2"),
+    url("fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff"),
+    url("fonts/OpenSans-VariableFont_wdth,wght.otf") format("otf"),
+    url("fonts/OpenSans-VariableFont_wdth,wght.ttf") format("ttf");
+  font-weight: 400-900;
+  font-style: normal;
+}
+
 // stylelint-disable value-keyword-case
-$font__main: "Open Sans", sans-serif;
-$font__heading: "Open Sans", sans-serif;
+$font__main: "Open-Sans-Local", sans-serif;
+$font__heading: "Open-Sans-Local", sans-serif;
 
 // stylelint-enable value-keyword-case
 $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
