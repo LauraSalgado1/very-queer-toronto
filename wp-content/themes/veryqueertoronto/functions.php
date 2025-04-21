@@ -148,30 +148,9 @@ add_action( 'widgets_init', 'veryqueertoronto_widgets_init' );
 function veryqueertoronto_scripts() {
 	wp_enqueue_style( 'veryqueertoronto-style', get_stylesheet_uri(), array(), timeVersion );
 	wp_style_add_data( 'veryqueertoronto-style', 'rtl', 'replace' );
-	wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array());
-	wp_enqueue_style( 'splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
 
-
+	wp_enqueue_script( 'veryqueertoronto-scripts', get_template_directory_uri() . '/js/scripts.js', array(), timeVersion, array('strategy' => 'defer') );
 	
-
-	wp_enqueue_script( 'veryqueertoronto-navigation', get_template_directory_uri() . '/js/navigation.js', array(), timeVersion, array(
-        'strategy' => 'defer'
-    ) );
-	wp_enqueue_script( 'veryqueertoronto-animatedQuestions', get_template_directory_uri() . '/js/animatedQuestions.js', array(), timeVersion, array(
-        'strategy' => 'defer'
-    ) );
-	wp_enqueue_script( 'email', get_template_directory_uri() . '/js/email.js', array(), timeVersion, array(
-        'strategy' => 'defer'
-    )  );
-	wp_enqueue_script( 'splideScript', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), timeVersion, array(
-        'strategy' => 'defer'
-    )  );
-	wp_enqueue_script( 'splideExtension', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js', array(), _S_VERSION, array(
-        'strategy' => 'defer'
-    )  );
-	wp_enqueue_script( 'splide', get_template_directory_uri() . '/js/splide.js', array(), timeVersion, array(
-        'strategy' => 'defer'
-    )  );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
