@@ -1349,8 +1349,8 @@ input[type="submit"]::after,
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	right: 0px;
-	top: -120px;
+	right: 10px;
+	top: -110px;
 }
 
 .pause svg {
@@ -1465,14 +1465,19 @@ svg {
 	font-weight: 900;
 }
 
+.home h2 {
+	margin-top: 0;
+}
+
 .event-column {
-	padding-top: 30px;
+	padding: 30px 0 70px;
 	background: #39585b;
 	position: relative;
 }
 
 @media (min-width: 900px) {
 	.event-column {
+		padding: 60px 0 0;
 		min-width: 380px;
 		background: #45686c;
 		border-left: 2px solid #c29f51;
@@ -1481,7 +1486,7 @@ svg {
 }
 
 .event-column section {
-	padding: 0 20px 70px;
+	padding: 0 20px;
 }
 
 @media (min-width: 900px) {
@@ -1634,7 +1639,7 @@ form:not(.matchmaking) {
 
 @media (min-width: 900px) {
 	.bg-image {
-		padding: 40px 80px;
+		padding: 40px 20px;
 	}
 }
 
@@ -1644,6 +1649,7 @@ form:not(.matchmaking) {
 	position: relative;
 	line-height: 1.4;
 	width: 320px;
+	max-width: 100%;
 }
 
 .bg-image a {
@@ -1678,8 +1684,8 @@ form:not(.matchmaking) {
 }
 
 .left-column {
-	min-height: 220px;
-	background: #45686c;
+	min-height: 230px;
+	background: #39585b;
 }
 
 @media (max-width: 900px) {
@@ -2201,7 +2207,7 @@ form:not(.matchmaking) {
 }
 
 .mobile-cards-section {
-	padding: 80px 0 90px;
+	padding: 80px 0 100px;
 }
 
 @media (min-width: 900px) {
@@ -2295,13 +2301,12 @@ form:not(.matchmaking) {
 
 .home .blocks {
 	background: #39585b;
-	padding-top: 30px;
+	padding-top: 50px;
 	padding-bottom: 10px;
 }
 
 @media (min-width: 900px) {
 	.home .blocks {
-		padding-top: 60px;
 		background: transparent;
 	}
 }
@@ -2320,7 +2325,7 @@ form:not(.matchmaking) {
 }
 
 .testimonials-section {
-	padding: 40px 0 120px;
+	padding: 70px 0 100px;
 }
 
 .testimonials-section .wrapper {
