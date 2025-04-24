@@ -281,10 +281,7 @@ get_header();
 
             endwhile; // End of the loop.
             ?>
-
         </div>
-
-       
 
         <?php if( have_rows('testimonials') ): ?>
             <div class="testimonials-section">

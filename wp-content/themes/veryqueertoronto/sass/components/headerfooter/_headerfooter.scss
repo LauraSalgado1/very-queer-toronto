@@ -57,10 +57,19 @@
         fill: $color__link-hover;
         position: relative;
         top: 4px;
+        transition: fill 0.2s ease;
       }
       .icon-x {
         display: none;
         right: 3px;
+      }
+      &::after {
+        display: none;
+      }
+      &:hover {
+        svg {
+          fill: $color__background-screen;
+        }
       }
     }
     > div {
@@ -190,6 +199,6 @@
 }
 
 .footer-logo {
-  width: 260px;
+  width: 150px;
   margin-bottom: 40px;
 }

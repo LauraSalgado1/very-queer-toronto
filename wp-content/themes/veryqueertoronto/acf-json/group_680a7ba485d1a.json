@@ -1,0 +1,334 @@
+{
+    "key": "group_680a7ba485d1a",
+    "title": "Matchmaking Page Template",
+    "fields": [
+        {
+            "key": "field_680a7ba64d79d",
+            "label": "Section One Heading",
+            "name": "section_one_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_680a7beb4d79e",
+            "label": "Section One Paragraph One",
+            "name": "section_one_paragraph_one",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_680a7c344d79f",
+            "label": "Section One Paragraph Two",
+            "name": "section_one_paragraph_two",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_680a7c3e4d7a0",
+            "label": "Section Two Heading",
+            "name": "section_two_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_680a7c894d7a1",
+            "label": "List Item",
+            "name": "list_item",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add List Item",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_680a7cad4d7a2",
+                    "label": "Heading",
+                    "name": "heading",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_680a7c894d7a1"
+                },
+                {
+                    "key": "field_680a7cda4d7a3",
+                    "label": "Paragraph",
+                    "name": "paragraph",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "acfe_textarea_code": 0,
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_680a7c894d7a1"
+                },
+                {
+                    "key": "field_680a7cf34d7a4",
+                    "label": "Bullet Points",
+                    "name": "bullet_points",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_repeater_stylised_button": 0,
+                    "layout": "table",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add bullet point to this list item",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_680a7d0d4d7a5",
+                            "label": "Bold Text",
+                            "name": "bold_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_680a7cf34d7a4"
+                        },
+                        {
+                            "key": "field_680a7d2d4d7a6",
+                            "label": "Regular Text",
+                            "name": "regular_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_680a7cf34d7a4"
+                        }
+                    ],
+                    "parent_repeater": "field_680a7c894d7a1"
+                }
+            ]
+        },
+        {
+            "key": "field_680a7d4f4d7a7",
+            "label": "Section Three Heading",
+            "name": "section_three_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_680a7d6b4d7a8",
+            "label": "Section Three Paragraph",
+            "name": "section_three_paragraph",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_textarea_code": 0,
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_680a9b0c82aed",
+            "label": "Form",
+            "name": "form",
+            "aria-label": "",
+            "type": "acfe_forms",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "forms": "",
+            "field_type": "checkbox",
+            "default_value": [],
+            "return_format": "name",
+            "layout": "vertical",
+            "toggle": 0,
+            "allow_custom": 0,
+            "allow_in_bindings": 0,
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": [],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "search_placeholder": "",
+            "other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-matchmaking-page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "block_editor",
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1745525540
+}

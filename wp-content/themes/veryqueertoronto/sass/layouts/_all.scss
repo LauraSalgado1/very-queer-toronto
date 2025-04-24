@@ -32,7 +32,7 @@ svg {
     min-height: calc(100vh - 82px);
   }
   h2 {
-    font-weight: 900;
+    font-weight: 800;
   }
 }
 
@@ -129,7 +129,7 @@ svg {
 }
 
 .page-container {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 160px;
   @media (min-width: 900px) {
     padding-top: 60px;
@@ -137,8 +137,6 @@ svg {
 }
 
 form:not(.matchmaking) {
-  width: 400px;
-  max-width: 100%;
   background: $color__background-screen;
   padding: 20px 20px 40px;
   border-radius: 20px;
@@ -752,7 +750,8 @@ form:not(.matchmaking) {
   }
   h2 {
     font-size: 1.4rem;
-    font-weight: 900;
+    font-weight: 800;
+    margin: 0;
   }
 
   img {
@@ -913,4 +912,103 @@ form:not(.matchmaking) {
 //inline links on a default page template
 .wp-singular .wrapper a {
   color: #fff;
+}
+
+.section-one,
+.section-two {
+  margin-bottom: 80px;
+  h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.section-two {
+  position: relative;
+  h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.section-three-form {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.intro-paragraphs > div {
+  display: grid;
+  &:first-child {
+    img {
+      order: -1;
+    }
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    &:first-child {
+      img {
+        order: 1;
+      }
+    }
+  }
+
+  img {
+    width: 150px;
+    justify-self: center;
+    align-self: center;
+    @media (min-width: 900px) {
+      width: 300px;
+    }
+  }
+  p {
+    align-self: center;
+  }
+}
+
+.list-items {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  > li {
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #39585b;
+    @media (min-width: 900px) {
+      padding: 20px 40px;
+      margin-bottom: 40px;
+    }
+  }
+  p {
+    margin-top: 0;
+    opacity: 0.9;
+  }
+}
+
+.list-item-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.bullet-points {
+  font-size: 1.1rem;
+  margin-left: 0;
+  > li {
+    margin-bottom: 10px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.regular {
+  opacity: 0.7;
 }

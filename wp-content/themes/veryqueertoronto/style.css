@@ -53,7 +53,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	font-family: "Open-Sans-Local";
 	src: url("fonts/OpenSans-VariableFont_wdth,wght.eot?#iefix") format("eot");
 	src: url("fonts/OpenSans-VariableFont_wdth,wght.eot") format("eot"), url("fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2"), url("fonts/OpenSans-VariableFont_wdth,wght.woff") format("woff"), url("fonts/OpenSans-VariableFont_wdth,wght.otf") format("otf"), url("fonts/OpenSans-VariableFont_wdth,wght.ttf") format("ttf");
-	font-weight: -500;
+	font-weight: -400;
 	font-style: normal;
 }
 
@@ -1105,7 +1105,7 @@ h2 {
 
 h3 {
 	font-size: 1.4rem;
-	font-weight: 900;
+	font-weight: 800;
 }
 
 p {
@@ -1462,7 +1462,7 @@ svg {
 }
 
 .three-columns h2 {
-	font-weight: 900;
+	font-weight: 800;
 }
 
 .home h2 {
@@ -1570,7 +1570,7 @@ svg {
 }
 
 .page-container {
-	padding-top: 20px;
+	padding-top: 40px;
 	padding-bottom: 160px;
 }
 
@@ -1581,8 +1581,6 @@ svg {
 }
 
 form:not(.matchmaking) {
-	width: 400px;
-	max-width: 100%;
 	background: #fff;
 	padding: 20px 20px 40px;
 	border-radius: 20px;
@@ -2273,7 +2271,8 @@ form:not(.matchmaking) {
 
 .mobile-card h2 {
 	font-size: 1.4rem;
-	font-weight: 900;
+	font-weight: 800;
+	margin: 0;
 }
 
 .mobile-card img {
@@ -2466,6 +2465,117 @@ form:not(.matchmaking) {
 
 .wp-singular .wrapper a {
 	color: #fff;
+}
+
+.section-one,
+.section-two {
+	margin-bottom: 80px;
+}
+
+.section-one h2,
+.section-two h2 {
+	margin-bottom: 40px;
+}
+
+.section-two {
+	position: relative;
+}
+
+.section-two h2 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.section-three-form {
+	width: 400px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.intro-paragraphs > div {
+	display: grid;
+}
+
+.intro-paragraphs > div:first-child img {
+	order: -1;
+}
+
+@media (min-width: 900px) {
+	.intro-paragraphs > div {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 60px;
+	}
+	.intro-paragraphs > div:first-child img {
+		order: 1;
+	}
+}
+
+.intro-paragraphs > div img {
+	width: 150px;
+	justify-self: center;
+	align-self: center;
+}
+
+@media (min-width: 900px) {
+	.intro-paragraphs > div img {
+		width: 300px;
+	}
+}
+
+.intro-paragraphs > div p {
+	align-self: center;
+}
+
+.list-items {
+	width: 500px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.list-items > li {
+	border-radius: 30px;
+	padding: 20px;
+	margin-bottom: 20px;
+	background: #39585b;
+}
+
+@media (min-width: 900px) {
+	.list-items > li {
+		padding: 20px 40px;
+		margin-bottom: 40px;
+	}
+}
+
+.list-items p {
+	margin-top: 0;
+	opacity: 0.9;
+}
+
+.list-item-header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+.bullet-points {
+	font-size: 1.1rem;
+	margin-left: 0;
+}
+
+.bullet-points > li {
+	margin-bottom: 10px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.regular {
+	opacity: 0.7;
 }
 
 /*--------------------------------------------------------------
@@ -2745,11 +2855,20 @@ form:not(.matchmaking) {
 	fill: #c29f51;
 	position: relative;
 	top: 4px;
+	transition: fill 0.2s ease;
 }
 
 .site-header .main-navigation .menu-toggle .icon-x {
 	display: none;
 	right: 3px;
+}
+
+.site-header .main-navigation .menu-toggle::after {
+	display: none;
+}
+
+.site-header .main-navigation .menu-toggle:hover svg {
+	fill: #fff;
 }
 
 .site-header .main-navigation > div {
@@ -2908,7 +3027,7 @@ form:not(.matchmaking) {
 }
 
 .footer-logo {
-	width: 260px;
+	width: 150px;
 	margin-bottom: 40px;
 }
 
