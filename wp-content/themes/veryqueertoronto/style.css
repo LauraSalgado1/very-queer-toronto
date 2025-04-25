@@ -1546,6 +1546,9 @@ svg {
 	.events-desktop-reduced-motion {
 		display: block;
 	}
+	.no-events img {
+		display: none;
+	}
 }
 
 @media (min-width: 900px) {
@@ -2473,7 +2476,7 @@ form:not(.matchmaking) {
 .image-mobile img {
 	flex-shrink: 1;
 	width: 50%;
-	border-radius: 30px;
+	border-radius: 20px;
 	overflow: hidden;
 }
 
@@ -2763,6 +2766,15 @@ form:not(.matchmaking) {
 
 .aioseo-breadcrumbs {
 	margin-bottom: 40px;
+}
+
+.no-events {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.no-events a {
+	color: #fff;
 }
 
 /*--------------------------------------------------------------

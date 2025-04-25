@@ -88,6 +88,9 @@ svg {
     .events-desktop-reduced-motion {
       display: block;
     }
+    .no-events img {
+      display: none;
+    }
   }
   .button-desktop.button-center {
     display: flex;
@@ -897,7 +900,7 @@ form:not(.matchmaking) {
   img {
     flex-shrink: 1;
     width: 50%;
-    border-radius: 30px;
+    border-radius: 20px;
     overflow: hidden;
   }
   &.bottom {
@@ -1148,4 +1151,12 @@ form:not(.matchmaking) {
 
 .aioseo-breadcrumbs {
   margin-bottom: 40px;
+}
+
+.no-events {
+  margin-top: 60px;
+  text-align: center;
+  a {
+    color: #fff;
+  }
 }

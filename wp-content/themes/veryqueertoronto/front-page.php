@@ -93,6 +93,8 @@ get_header();
                         ) );
                     ?>
 
+                    <?php if ( $eventsquery->have_posts() ) : ?>
+
                     <div class="animate__animated animate__fadeIn animate__delay-2s splide desktop-scroll">
                         <button class="splide__toggle pause" type="button">
                             <svg
@@ -141,64 +143,76 @@ get_header();
                             </ul>
                         </div>
                     </div>
+                    <?php else: ?>
+                        <div class="no-events">
+                            <p>No events to show at this time. Check back soon! </p><p>Insta <a href="https://www.instagram.com/veryqueertoronto" target="_blank">@veryqueertoronto</a> to stay up to date.</p>
+                            <img class="" src="<?php echo get_template_directory_uri(); ?>/images/NyanCat.gif" alt="Nyan Cat" width="200" height="79" loading="lazy" />
+                        </div>
+                    <?php endif; ?>
 
-                    <ul class="events-desktop-reduced-motion list-no-style">
-                        <?php
-                        while ( $eventsquery->have_posts() ) :
-                            $eventsquery->the_post();
-                            $vqtEvent = get_field('vqt_event');
-                        ?>
-                        <li class=""> 
-                            <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
-                                <?php
-                                    if( get_field('vqt_event') ) {
-                                        echo '<span class="capsule">VQT Event</span>';
-                                    }
-                                ?>
-                                <span class="event-meta">
-                                    <span><?php echo esc_html( get_field('event_date') ); ?></span>
-                                    <span>
-                                        <?php echo esc_html( get_field('event_time') ); ?>
-                                        <?php if( get_field('event_end_time') ): ?>
-                                                - <?php echo esc_html( get_field('event_end_time') ); ?>
-                                        <?php endif; ?>  
+                     <?php if ( $eventsquery->have_posts() ) : ?>
+                        <ul class="events-desktop-reduced-motion list-no-style">
+                            <?php
+                            while ( $eventsquery->have_posts() ) :
+                                $eventsquery->the_post();
+                                $vqtEvent = get_field('vqt_event');
+                            ?>
+                            <li class=""> 
+                                <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                                    <?php
+                                        if( get_field('vqt_event') ) {
+                                            echo '<span class="capsule">VQT Event</span>';
+                                        }
+                                    ?>
+                                    <span class="event-meta">
+                                        <span><?php echo esc_html( get_field('event_date') ); ?></span>
+                                        <span>
+                                            <?php echo esc_html( get_field('event_time') ); ?>
+                                            <?php if( get_field('event_end_time') ): ?>
+                                                    - <?php echo esc_html( get_field('event_end_time') ); ?>
+                                            <?php endif; ?>  
+                                        </span>
                                     </span>
-                                </span>
-                                <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
-                            </a>
-                        </li>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>    
-                    </ul>
+                                    <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
+                                </a>
+                            </li>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>    
+                        </ul>
+                    <?php endif; ?>
 
-                    <ul class="events-mobile list-no-style">
-                        <?php
-                        while ( $eventsquery->have_posts() ) :
-                            $eventsquery->the_post();
-                            $vqtEvent = get_field('vqt_event');
-                        ?>
-                        <li class=""> 
-                            <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
-                                <?php
-                                    if( get_field('vqt_event') ) {
-                                        echo '<span class="capsule">VQT Event</span>';
-                                    }
-                                ?>
-                                <span class="event-meta">
-                                    <span><?php echo esc_html( get_field('event_date') ); ?></span>
-                                    <span>
-                                        <?php echo esc_html( get_field('event_time') ); ?>
-                                        <?php if( get_field('event_end_time') ): ?>
-                                                - <?php echo esc_html( get_field('event_end_time') ); ?>
-                                        <?php endif; ?>  
+                     
+                    <?php if ( $eventsquery->have_posts() ) : ?>
+                        <ul class="events-mobile list-no-style">
+                            <?php
+                            while ( $eventsquery->have_posts() ) :
+                                $eventsquery->the_post();
+                                $vqtEvent = get_field('vqt_event');
+                            ?>
+                            <li class=""> 
+                                <a class="event-card <?php if($vqtEvent): ?>vqt-event<?php endif; ?>" href="<?php echo esc_html( get_field('event_link') ); ?>" target="_blank">
+                                    <?php
+                                        if( get_field('vqt_event') ) {
+                                            echo '<span class="capsule">VQT Event</span>';
+                                        }
+                                    ?>
+                                    <span class="event-meta">
+                                        <span><?php echo esc_html( get_field('event_date') ); ?></span>
+                                        <span>
+                                            <?php echo esc_html( get_field('event_time') ); ?>
+                                            <?php if( get_field('event_end_time') ): ?>
+                                                    - <?php echo esc_html( get_field('event_end_time') ); ?>
+                                            <?php endif; ?>  
+                                        </span>
                                     </span>
-                                </span>
-                                <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
-                            </a>
-                        </li>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>    
-                    </ul>
+                                    <h3><?php echo esc_html( get_field('event_title') ); ?></h3>
+                                </a>
+                            </li>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>    
+                        </ul>
+                    <?php endif; ?>
+
 
                     <div class="button-center button-mobile">
                         <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
@@ -280,16 +294,16 @@ get_header();
 
                 <div class="gallery">
                     <?php if($about['image_left']): ?>	
-                         <?php echo wp_get_attachment_image( $about['image_left']['ID'], array('600', '500'), "" ); ?>	
+                         <?php echo wp_get_attachment_image( $about['image_left']['ID'], array('380', '506'), "" ); ?>	
                     <?php endif; ?>
 
 
                     <?php if($about['image_right']): ?>	
-                         <?php echo wp_get_attachment_image( $about['image_right']['ID'], array('600', '500'), "" ); ?>	
+                         <?php echo wp_get_attachment_image( $about['image_right']['ID'], array('380', '506'), "" ); ?>	
                     <?php endif; ?>
 
                     <?php if($about['image_bottom']): ?>	
-                         <?php echo wp_get_attachment_image( $about['image_bottom']['ID'], array('600', '500'), "" ); ?>	
+                         <?php echo wp_get_attachment_image( $about['image_bottom']['ID'], array('760', '467'), "" ); ?>	
                     <?php endif; ?>
                 </div>
 
@@ -315,11 +329,11 @@ get_header();
 
                              <div class="image-mobile">
                                 <?php if($about['image_left']): ?>	
-                                    <?php echo wp_get_attachment_image( $about['image_left']['ID'], array('600', '500'), "" ); ?>	
+                                    <?php echo wp_get_attachment_image( $about['image_left']['ID'], array('270', '391'), "" ); ?>	
                                 <?php endif; ?>
                         
                                 <?php if($about['image_right']): ?>	
-                                    <?php echo wp_get_attachment_image( $about['image_right']['ID'], array('600', '500'), "" ); ?>	
+                                    <?php echo wp_get_attachment_image( $about['image_right']['ID'], array('270', '391'), "" ); ?>	
                                 <?php endif; ?>
                             </div>
 
@@ -329,7 +343,7 @@ get_header();
 
                             <div class="image-mobile bottom">
                                 <?php if($about['image_bottom']): ?>	
-                                    <?php echo wp_get_attachment_image( $about['image_bottom']['ID'], array('600', '500'), "" ); ?>	
+                                    <?php echo wp_get_attachment_image( $about['image_bottom']['ID'], array('550', '337'), "" ); ?>	
                                 <?php endif; ?>
                             </div>
                         </div>
