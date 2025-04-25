@@ -18,15 +18,12 @@ get_header();
     $form = get_field('form');
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main vqt-page-template matchmaking-page-template">
 		<div class="page-form page-container wrapper">
 			<?php if( function_exists( 'aioseo_breadcrumbs' ) ) aioseo_breadcrumbs(); ?>
 			<div class="page-header">
-				<div>
 					<?php the_title( '<h1>', '</h1>' ); ?>
-				</div>
 			</div>
-
 					
             <section class="section-one">
                 <?php if($sectionOneHeading): ?>

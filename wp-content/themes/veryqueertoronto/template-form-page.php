@@ -22,7 +22,7 @@ get_header();
 	$emailButton = get_field('email_vqt_button');
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main vqt-page-template">
 		<div class="page-form page-container wrapper">
 			<?php if( function_exists( 'aioseo_breadcrumbs' ) ) aioseo_breadcrumbs(); ?>
 			<div class="page-header">

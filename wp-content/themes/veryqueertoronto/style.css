@@ -1108,6 +1108,26 @@ h3 {
 	font-weight: 800;
 }
 
+.vqt-page-template h1 {
+	font-size: 2rem;
+}
+
+@media (min-width: 900px) {
+	.vqt-page-template h1 {
+		font-size: 3rem;
+	}
+}
+
+.vqt-page-template h2 {
+	font-size: 1.8rem;
+}
+
+@media (min-width: 900px) {
+	.vqt-page-template h2 {
+		font-size: 1.8rem;
+	}
+}
+
 p {
 	margin-bottom: 1.5em;
 	font-size: 1.4rem;
@@ -2310,6 +2330,167 @@ form:not(.matchmaking) {
 	}
 }
 
+.about-section {
+	background: #39585b;
+	padding-top: 100px;
+	padding-bottom: 10px;
+}
+
+@media (min-width: 900px) {
+	.about-section {
+		background: transparent;
+	}
+}
+
+.about-header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 30px;
+}
+
+.profile-picture {
+	text-align: center;
+}
+
+.profile-picture img {
+	border-radius: 50%;
+}
+
+.about-wrapper {
+	padding: 0 20px;
+	width: 1600px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+	.about-wrapper {
+		padding: 0 40px;
+	}
+}
+
+.about-wrapper .about-image {
+	flex-grow: 1;
+}
+
+.about-wrapper .about-image img {
+	width: 100%;
+	border-radius: 30px;
+}
+
+.about-wrapper .gallery {
+	display: none;
+}
+
+@media (min-width: 900px) {
+	.about-wrapper .gallery {
+		display: block;
+		border-radius: 40px;
+		overflow: hidden;
+		width: 33%;
+		gap: 0px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.about-wrapper .gallery {
+		width: 50%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.about-wrapper .gallery img {
+	aspect-ratio: 3/4;
+	object-fit: cover;
+	display: block;
+	overflow: hidden;
+	border-radius: 30px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+@media (min-width: 900px) {
+	.about-wrapper .gallery img {
+		margin-bottom: 0;
+		border-radius: 0;
+	}
+}
+
+.about-wrapper .gallery img:nth-child(3) {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	aspect-ratio: auto;
+}
+
+.about-row {
+	width: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 0;
+}
+
+@media (min-width: 900px) {
+	.about-row {
+		flex-direction: row;
+	}
+}
+
+.about-row .about-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+@media (min-width: 900px) {
+	.about-row .about-text {
+		padding: 0 0 0 60px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.about-row .about-text {
+		width: 50%;
+	}
+}
+
+.about-row .about-text-wrapper {
+	max-width: 550px;
+}
+
+.image-mobile {
+	display: flex;
+	max-width: 100%;
+	gap: 10px;
+	margin: 60px 0;
+}
+
+.image-mobile img {
+	flex-shrink: 1;
+	width: 50%;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.image-mobile.bottom {
+	margin-bottom: 0;
+}
+
+.image-mobile.bottom img {
+	width: 100%;
+}
+
+@media (min-width: 900px) {
+	.image-mobile {
+		display: none;
+	}
+}
+
 .vqt .splide__arrow {
 	background: #c29f51;
 	opacity: 1;
@@ -2343,12 +2524,6 @@ form:not(.matchmaking) {
 	text-align: center;
 }
 
-@media (min-width: 900px) {
-	.testimonials-section h2 {
-		text-align: left;
-	}
-}
-
 .testimonials-section .splide__pagination {
 	bottom: -40px;
 }
@@ -2359,10 +2534,9 @@ form:not(.matchmaking) {
 
 @media (min-width: 900px) {
 	.testimonials-section .splide__arrow--next {
-		top: -50px;
+		top: -48px;
 		display: flex;
-		right: auto;
-		left: 295px;
+		right: 30%;
 	}
 }
 
@@ -2372,8 +2546,8 @@ form:not(.matchmaking) {
 
 @media (min-width: 900px) {
 	.testimonials-section .splide__arrow--prev {
-		left: 250px;
-		top: -50px;
+		left: 30%;
+		top: -48px;
 		display: flex;
 	}
 }
@@ -2395,7 +2569,7 @@ form:not(.matchmaking) {
 .testimonial .testimonial-wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	width: 100%;
 	height: 100%;
@@ -2467,6 +2641,11 @@ form:not(.matchmaking) {
 	color: #fff;
 }
 
+.matchmaking-page-template h1 {
+	width: 620px;
+	max-width: 100%;
+}
+
 .section-one,
 .section-two {
 	margin-bottom: 80px;
@@ -2477,6 +2656,11 @@ form:not(.matchmaking) {
 	margin-bottom: 40px;
 }
 
+.section-one h2 {
+	width: 530px;
+	max-width: 100%;
+}
+
 .section-two {
 	position: relative;
 }
@@ -2484,7 +2668,7 @@ form:not(.matchmaking) {
 .section-two h2 {
 	margin-left: auto;
 	margin-right: auto;
-	width: 700px;
+	width: 500px;
 	max-width: 100%;
 	text-align: center;
 }
@@ -2551,7 +2735,6 @@ form:not(.matchmaking) {
 
 .list-items p {
 	margin-top: 0;
-	opacity: 0.9;
 }
 
 .list-item-header {
@@ -2576,6 +2759,10 @@ form:not(.matchmaking) {
 
 .regular {
 	opacity: 0.7;
+}
+
+.aioseo-breadcrumbs {
+	margin-bottom: 40px;
 }
 
 /*--------------------------------------------------------------

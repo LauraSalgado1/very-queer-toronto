@@ -49,7 +49,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="three-columns">
+        <section class="three-columns">
 
             <?php
             $leftColumn = get_field('left_column');
@@ -224,21 +224,21 @@ get_header();
 
             </div>
             <?php endif; ?>
-        </div>
+        </section>
 
-        <div class="mobile-cards-section">
+        <section class="mobile-cards-section">
             <div class="mobile-cards splide">
                 <div class="splide__track">
                     <ul class="mobile-cards-wrapper splide__list">
                         <?php 
                         if( $leftColumn ): ?>
                         <li class="splide__slide">
-                                <a class="mobile-card " href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
-                                    <?php echo wp_get_attachment_image( $leftBg['id'], array('300', '300'), "" ); ?>
-                                    <div class="title-wrapper">
-                                        <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
-                                    </div>
-                                </a>
+                            <a class="mobile-card " href="<?php echo esc_url( $leftColumn['link']['url'] ); ?>" target="<?php echo esc_attr( $leftColumn['link']['target'] ); ?>">   
+                                <?php echo wp_get_attachment_image( $leftBg['id'], array('300', '300'), "" ); ?>
+                                <div class="title-wrapper">
+                                    <h2><?php echo esc_html( $leftColumn['link']['title'] ); ?></h2>
+                                </div>
+                            </a>
                         </li>
                         <?php endif; ?>
 
@@ -266,13 +266,79 @@ get_header();
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="button-center button-desktop">
             <a class="button button-reverse button-se" href="/submit-an-event">Event Submissions</a>
         </div>
 
-        <div class="wrapper blocks">
+        <?php $about = get_field('about_section');  ?>
+
+        <section class="about-section">
+            <div class="about-wrapper">
+                <div class="about-row">
+
+                <div class="gallery">
+                    <?php if($about['image_left']): ?>	
+                         <?php echo wp_get_attachment_image( $about['image_left']['ID'], array('600', '500'), "" ); ?>	
+                    <?php endif; ?>
+
+
+                    <?php if($about['image_right']): ?>	
+                         <?php echo wp_get_attachment_image( $about['image_right']['ID'], array('600', '500'), "" ); ?>	
+                    <?php endif; ?>
+
+                    <?php if($about['image_bottom']): ?>	
+                         <?php echo wp_get_attachment_image( $about['image_bottom']['ID'], array('600', '500'), "" ); ?>	
+                    <?php endif; ?>
+                </div>
+
+
+                    <div class="about-text">
+                        <div class="about-text-wrapper">
+                            <div class="about-header">
+                                <?php if($about['heading']): ?>		
+                                        <h2><?php echo esc_html( $about['heading'] ); ?></h2>
+                                <?php endif; ?>
+
+                                <?php if($about['profile_picture']): ?>
+                                    <div class="profile-picture">		
+                                        <?php echo wp_get_attachment_image( $about['profile_picture']['ID'], array('200', '200'), "" ); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+
+                          
+                            <?php if($about['paragraphs_one']): ?>		
+                                    <p><?php echo $about['paragraphs_one']; ?></p>
+                            <?php endif; ?>
+
+                             <div class="image-mobile">
+                                <?php if($about['image_left']): ?>	
+                                    <?php echo wp_get_attachment_image( $about['image_left']['ID'], array('600', '500'), "" ); ?>	
+                                <?php endif; ?>
+                        
+                                <?php if($about['image_right']): ?>	
+                                    <?php echo wp_get_attachment_image( $about['image_right']['ID'], array('600', '500'), "" ); ?>	
+                                <?php endif; ?>
+                            </div>
+
+                            <?php if($about['paragraphs_two']): ?>		
+                                <p><?php echo $about['paragraphs_two']; ?></p>
+                            <?php endif; ?>
+
+                            <div class="image-mobile bottom">
+                                <?php if($about['image_bottom']): ?>	
+                                    <?php echo wp_get_attachment_image( $about['image_bottom']['ID'], array('600', '500'), "" ); ?>	
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <section class="wrapper blocks">
             <?php
             while ( have_posts() ) :
                 the_post();
@@ -281,10 +347,10 @@ get_header();
 
             endwhile; // End of the loop.
             ?>
-        </div>
+        </section>
 
         <?php if( have_rows('testimonials') ): ?>
-            <div class="testimonials-section">
+            <section class="testimonials-section">
                 <div class="wrapper">
                     <h2>Testimonials</h2>
                     <div class="testimonials splide">
@@ -309,10 +375,9 @@ get_header();
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         <?php endif; ?>
-
-	</main><!-- #main -->
+	</main>
 
 <?php
 get_sidebar();
