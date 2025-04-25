@@ -225,24 +225,29 @@
         },
         {
             "key": "field_67eefd8fe9b1c",
-            "label": "Question Four?",
+            "label": "If a personalized service could guide you to your perfect person, would that be worth an investment?",
             "name": "question_four",
             "aria-label": "",
-            "type": "text",
+            "type": "radio",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "yes": "<span class=\"button\">Yes<\/span>",
+                "no": "<span class=\"button\">I'm not sure yet<\/span>"
+            },
             "default_value": "",
-            "maxlength": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
             "allow_in_bindings": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "layout": "vertical",
+            "save_other_choice": 0
         },
         {
             "key": "field_67f031de072b5",
@@ -312,8 +317,8 @@
                 "id": ""
             },
             "choices": {
-                "custom": "<span class=\"button\">The Advocate Package<\/span><span class=\"label-text details\">We offer an entirely bespoke, one-on-one matchmaking service. Your expert matchmaker will work extensively to learn everything about you and who you're looking for.<\/span><span class=\"label-text details\"> This ongoing process means that all of your potential matches have already been custom screened precisely for you.<\/span><span class=\"details\">Monthly rates start at $1000<\/span>",
-                "circle": "<span class=\"button\">The Circle<\/span><span class=\"label-text details\">Be included in our topflight community of suitors.<\/span><span class=\"label-text details\">Rates start at $300<\/span>"
+                "custom": "<span class=\"button\">The Advocate Package<\/span><span class=\"label-text details\">We offer an entirely bespoke, one-on-one matchmaking service. Your expert matchmaker will work extensively to learn everything about you and who you're looking for.<\/span><span class=\"label-text details\"> This ongoing process means that all of your potential matches have already been custom screened precisely for you.<\/span><span class=\"details\">Rates start at $500\/ month, with a 3 month commitment<\/span>",
+                "circle": "<span class=\"button\">The Circle<\/span><span class=\"label-text details\">Be included in our topflight community of suitors.<\/span><span class=\"label-text details\">$200 annual fee<\/span>"
             },
             "default_value": "",
             "return_format": "value",
@@ -378,7 +383,7 @@
         },
         {
             "key": "field_67f586250c78c",
-            "label": "Your First Name",
+            "label": "Your Name",
             "name": "first_name",
             "aria-label": "",
             "type": "text",
@@ -490,5 +495,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1744926222
+    "modified": 1745603171
 }
