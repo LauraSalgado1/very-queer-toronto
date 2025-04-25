@@ -3078,6 +3078,10 @@ form:not(.matchmaking) {
 	width: 100vw;
 }
 
+.site-header .main-navigation > div .current-menu-item a {
+	border-bottom: 2px solid #c29f51;
+}
+
 .site-header .main-navigation > div a {
 	color: #fff;
 	font-size: 1.8rem;

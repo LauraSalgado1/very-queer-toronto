@@ -78,6 +78,9 @@
       right: 0;
       top: 82px;
       width: 100vw;
+      .current-menu-item a {
+        border-bottom: 2px solid $color__link-hover;
+      }
 
       a {
         color: $color__background-screen;
@@ -129,6 +132,7 @@
     }
   }
 }
+
 .site-footer {
   padding: 40px 20px 20px;
   background: #283e40;
