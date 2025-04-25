@@ -243,7 +243,7 @@
             },
             "default_value": "",
             "return_format": "value",
-            "allow_null": 0,
+            "allow_null": 1,
             "other_choice": 0,
             "allow_in_bindings": 1,
             "layout": "vertical",
@@ -495,5 +495,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1745603488
+    "modified": 1745615964
 }
