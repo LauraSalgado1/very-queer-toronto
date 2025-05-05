@@ -792,10 +792,11 @@ form:not(.matchmaking) {
 
 .about-section {
   background: #39585b;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 10px;
   @media (min-width: 900px) {
     background: transparent;
+    padding-top: 100px;
   }
 }
 

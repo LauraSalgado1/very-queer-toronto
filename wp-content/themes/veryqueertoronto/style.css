@@ -1130,7 +1130,7 @@ h3 {
 
 p {
 	margin-bottom: 1.5em;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 
 dfn,
@@ -2335,13 +2335,14 @@ form:not(.matchmaking) {
 
 .about-section {
 	background: #39585b;
-	padding-top: 100px;
+	padding-top: 80px;
 	padding-bottom: 10px;
 }
 
 @media (min-width: 900px) {
 	.about-section {
 		background: transparent;
+		padding-top: 100px;
 	}
 }
 

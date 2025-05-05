@@ -40,7 +40,7 @@
 			</div>
 			
 		</div>
-		<p>&copy; VQT Events <?php echo date('Y'); ?>. All rights reserved.</p>
+		<p>&copy; VQT (Very Queer Toronto) Events <?php echo date('Y'); ?>. All rights reserved.</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -19,7 +19,7 @@ get_header();
         <h1 class="screen-reader-text">VQT Events – Very Queer Toronto Events – Queer events in Toronto</h1>
         <div class="matchmaking-modal">
             <div class="mm-modal-button-wrapper">
-                <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" loading="lazy" />
+                <img class="animate__animated animate__zoomInUp animate__delay-2s" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.avif" alt="Cartoon KT holding a red heart" width="110" height="111" loading="lazy" />
                 <span>
                     <span class="mm-intro">
                         <span class="speech animate__animated animate__jackInTheBox animate__delay-3s">
@@ -42,8 +42,8 @@ get_header();
                 </button>
                         
                 <div class="image-and-form">
-                    <img loading="lazy" class="modal-kt kt-mobile" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.png" alt="Cartoon KT holding a red heart" width="110" height="110" />
-                    <img loading="lazy" class="modal-kt kt-desktop" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-large.png" alt="Cartoon KT holding a red heart" width="200" height="202" /> 
+                    <img loading="lazy" class="modal-kt kt-mobile" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-small.avif" alt="Cartoon KT holding a red heart" width="110" height="111" />
+                    <img loading="lazy" class="modal-kt kt-desktop" src="<?php echo get_template_directory_uri(); ?>/images/KT-heart-transparent-large.avif" alt="Cartoon KT holding a red heart" width="200" height="202" /> 
                     <?php echo do_shortcode("[acfe_form name='matchmaking']"); ?> 
                     <div class="form-right"></div>
                 </div>
@@ -95,7 +95,7 @@ get_header();
 
                     <?php if ( $eventsquery->have_posts() ) : ?>
 
-                    <div class="animate__animated animate__fadeIn animate__delay-2s splide desktop-scroll">
+                    <div class="animate__animated animate__fadeIn splide desktop-scroll">
                         <button class="splide__toggle pause" type="button">
                             <svg
                                 class="splide__toggle__pause"
@@ -271,7 +271,7 @@ get_header();
 
                         <li class="splide__slide">
                             <a class="mobile-card" href="/submit-an-event">
-                                <img class="" src="<?php echo get_template_directory_uri(); ?>/images/crowd.jpg" alt="Crowd at a concert" width="300" height="300" loading="lazy" />
+                                <img class="" src="<?php echo get_template_directory_uri(); ?>/images/crowd.avif" alt="Crowd at a concert" width="300" height="300" loading="lazy" />
                                 <div class="title-wrapper">
                                     <h2>Promote Your Event</h2>
                                 </div>
