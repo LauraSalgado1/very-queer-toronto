@@ -1,5 +1,5 @@
 <?php exit; ?>{
-    "version": "2.8.8",
+    "version": "2.8.10",
     "cluster.messagebus.debug": false,
     "cluster.messagebus.enabled": false,
     "cluster.messagebus.sns.region": "",
@@ -1029,5 +1029,9 @@
     "extension.user-experience-oembed": "0",
     "file_locking": "0",
     "file_nfs": "0",
-    "minify.wp_cron": "0"
+    "minify.wp_cron": "0",
+    "pgcache.bad_behavior_path": "",
+    "newrelic": {
+        "monitoring_type": "apm"
+    }
 }
